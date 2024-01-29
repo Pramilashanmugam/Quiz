@@ -1,0 +1,37 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('assets/images/background.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    }
+
+div {
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+h1, p {
+    color: rgb(74, 64, 64);
+    margin: 20px 0;
+}
+.button {
+    display:inline-flex;
+    padding: 10px 20px;
+    margin: 15px;
+    font-size: 16px;
+    background-color: rgb(74, 64, 64);;
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor:pointer;
+}
+.button:hover {
+    background-color: orange;
+}
