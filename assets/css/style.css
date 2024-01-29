@@ -1,37 +1,52 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('assets/images/background.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    }
+    background-image: url('../images/quizbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
 
-div {
-    margin-top: 20%;
-    margin-bottom: 20%;
+.cointainer {
+    background-color:maroon;
+    padding: 20px;
+    margin: auto;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 200px;
+    margin-top: 200px;
+   
 }
-h1, p {
-    color: rgb(74, 64, 64);
-    margin: 20px 0;
+
+h1,
+p {
+    padding:20px;
+    color: whitesmoke;
+    margin: 20px;
 }
+
 .button {
-    display:inline-flex;
+    display: inline-flex;
     padding: 10px 20px;
     margin: 15px;
     font-size: 16px;
-    background-color: rgb(74, 64, 64);;
+    background-color: lightslategray;
     color: whitesmoke;
     border: none;
     border-radius: 10px;
-    text-decoration: none;
-    cursor:pointer;
+    cursor: pointer;
 }
+
 .button:hover {
     background-color: orange;
 }
