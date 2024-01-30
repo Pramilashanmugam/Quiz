@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Title of the website-->
     <title>Quiz to check your knowledge</title>
-     <!--Stylesheets-->
+    <!--Stylesheets-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    
+
 </head>
+
 <body>
-    <div class="cointainer">
-        <h1>It's time to check your HTML, CSS and Javascript knowledge?</h1>
-        <p>Choose your option below</p>
-        <button  id="html-btn" class="button" onclick="window.location.href='htmlquiz.html';">HTML</button>
-        <button id="css-btn" class="button" onclick="window.location.href='cssquiz.html';">CSS</button>
-        <button id="javascript-btn" class="button" onclick="window.location.href='jsquiz.html';">JavaScript</button>
+    <!--Main division of the quiz container-->
+    <div class="container">
+        <h1>Quiz time</h1>
+        <p>Are you ready for the challenge?</p>
+        <!--button to go to instructions-->
+        <button id="start-btn" class="button" onclick="goToInstructions()">Start</button>
     </div>
-  <script src="assets/js/script.js"></script>  
+    <!--displays the division container-->
+    <div id="instructions" class="hiddenDiv">
+        <h2>Instructions before you start</h2>
+        <p>You can choose your topic between HTML, CSS and JavaScript</p>
+        <p>There are 10 questions in each topic</p>
+        <p>Every correct answer will be rewarded with 1 point</p>
+        <!--two buttons to choose between start the game or exit-->
+        <button id="ready-btn" class="button" onclick="jumpToOptions()">Ready</button>
+        <button id="exit-btn" class="button" onclick="goHome()">Exit</button>
+    </div>
+    <!--a division to display the options to choose-->
+    <div id="options" class="hide">
+        <p>Choose your option below</p>
+        <div class="values" class="hide">
+            <label for="question">Number of Questions:</label>
+            <select id="question">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+            </select>
+            <button id="html-btn" class="button" onclick="window.location.href='htmlquiz.html';">HTML</button>
+            <button id="css-btn" class="button" onclick="window.location.href='cssquiz.html';">CSS</button>
+            <button id="javascript-btn" class="button" onclick="window.location.href='jsquiz.html';">JavaScript</button>
+        </div>
+
+    </div>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

@@ -9,30 +9,39 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
     background-image: url('../images/quizbackground.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
 }
 
-.cointainer {
-    background-color:maroon;
+.container {
+    background-color: rgb(98, 0, 0);
+    position: relative;
+    width: 100%;
+    max-width: 420px;
     padding: 20px;
+    border-radius: 20px;
     margin: auto;
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 200px;
-    margin-top: 200px;
-   
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    ;
 }
 
-h1,
-p {
-    padding:20px;
+h1, h2 {
+    padding: 10px;
     color: whitesmoke;
-    margin: 20px;
+    margin: 10px;
+}
+p {
+    color: #ff8000;
+}
+
+.values{
+    color: #ff8000;
 }
 
 .button {
@@ -48,5 +57,11 @@ p {
 }
 
 .button:hover {
-    background-color: orange;
+    background-color: #ff8000;
+}
+.hide {
+    display: none;
+}
+.hiddenDiv {
+    display:none;
 }
