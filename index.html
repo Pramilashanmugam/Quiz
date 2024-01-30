@@ -17,26 +17,26 @@
 
 <body>
     <!--Main division of the quiz container-->
-    <div class="container">
+    <div id="container">
         <h1>Quiz time</h1>
         <p>Are you ready for the challenge?</p>
         <!--button to go to instructions-->
         <button id="start-btn" class="button" onclick="goToInstructions()">Start</button>
     </div>
     <!--displays the division container-->
-    <div id="instructions" class="hiddenDiv">
+    <div id="instructions" class="hide">
         <h2>Instructions before you start</h2>
         <p>You can choose your topic between HTML, CSS and JavaScript</p>
         <p>There are 10 questions in each topic</p>
         <p>Every correct answer will be rewarded with 1 point</p>
         <!--two buttons to choose between start the game or exit-->
         <button id="ready-btn" class="button" onclick="jumpToOptions()">Ready</button>
-        <button id="exit-btn" class="button" onclick="goHome()">Exit</button>
+        <button id="exit-btn" class="button" onclick="goToInstructions()">Exit</button>
     </div>
     <!--a division to display the options to choose-->
     <div id="options" class="hide">
         <p>Choose your option below</p>
-        <div class="values" class="hide">
+        <div class="values hide">
             <label for="question">Number of Questions:</label>
             <select id="question">
                 <option value="5">5</option>

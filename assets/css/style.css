@@ -19,7 +19,19 @@ body {
     background-repeat: no-repeat;
 }
 
-.container {
+#container {
+    background-color: rgb(98, 0, 0);
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    ;
+}
+
+#instructions {
     background-color: rgb(98, 0, 0);
     position: relative;
     width: 100%;
@@ -61,7 +73,4 @@ p {
 }
 .hide {
     display: none;
-}
-.hiddenDiv {
-    display:none;
 }

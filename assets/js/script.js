@@ -1,14 +1,18 @@
 function goToInstructions() {
-    var containerDiv = document.querySelector('.container');
-    var instructionsDiv = document.getElementById('instructions');
-    containerDiv.appendChild(instructionsDiv);
-    instructionsDiv.classList.remove('hiddenDiv');
-    containerDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    
+
+    var swap = document.getElementById('container').style.display !== 'none';   
+    if(swap == true){
+        document.getElementById('container').style.display= 'none';
+        document.getElementById('instructions').style.display = 'block';
+    }else{
+        document.getElementById('container').style.display= 'block';
+        document.getElementById('instructions').style.display = 'none';
+    }
+   
+        
 }
 
 function jumpToOptions() {
     alert(`am i working?`);
-    
-    
+      
 }
