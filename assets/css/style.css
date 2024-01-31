@@ -19,19 +19,7 @@ body {
     background-repeat: no-repeat;
 }
 
-#container {
-    background-color: rgb(98, 0, 0);
-    position: relative;
-    width: 100%;
-    max-width: 420px;
-    padding: 20px;
-    border-radius: 20px;
-    margin: auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    ;
-}
-
-#instructions {
+#container, #instructions, #options {
     background-color: rgb(98, 0, 0);
     position: relative;
     width: 100%;
@@ -61,8 +49,9 @@ p {
     padding: 10px 20px;
     margin: 15px;
     font-size: 16px;
-    background-color: lightslategray;
-    color: whitesmoke;
+    font-weight: bold;
+    background-color: #e3cbbf;
+    color: black;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -70,7 +59,27 @@ p {
 
 .button:hover {
     background-color: #ff8000;
+    color:whitesmoke;
 }
 .hide {
     display: none;
 }
+label {
+    color:#ff8000;
+    margin: 10px;
+}
+
+/*select#option {
+    background-color:lightyellow;
+    text-align: center;
+    border-color: #ff8000;
+    color:rgb(98, 0, 0);
+    font-size: 1rem;
+    width:100px;
+    height:30px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family:serif;
+    box-shadow: 5px 5px 10px rgba(88, 64, 64, 0.1);
+    cursor: pointer;
+}*/

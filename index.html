@@ -35,18 +35,19 @@
     </div>
     <!--a division to display the options to choose-->
     <div id="options" class="hide">
+        <h2>Lets go for it..</h2>
         <p>Choose your option below</p>
-        <div class="values hide">
-            <label for="question">Number of Questions:</label>
-            <select id="question">
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-            </select>
-            <button id="html-btn" class="button" onclick="window.location.href='htmlquiz.html';">HTML</button>
-            <button id="css-btn" class="button" onclick="window.location.href='cssquiz.html';">CSS</button>
-            <button id="javascript-btn" class="button" onclick="window.location.href='jsquiz.html';">JavaScript</button>
-        </div>
+        <button id="html-btn" class="button" onclick="htmlQuizQuestions()">HTML</button>
+        <button id="css-btn" class="button" onclick="cssQuizQuestions()">CSS</button>
+        <button id="javascript-btn" class="button" onclick="javascriptQuizQuestions()">JavaScript</button>
+        
+        
+               <!--  <label for="option">Choose your option:</label>
+            <select id="option">
+                <option class="select" value="html">HTML</option>
+                <option class="select" value="css">CSS</option>
+                <option class="select" value="javascript">JavaScript</option>
+            </select>  -->
 
     </div>
     <script src="assets/js/script.js"></script>
