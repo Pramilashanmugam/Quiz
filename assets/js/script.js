@@ -67,7 +67,7 @@ var questions = [
 ];
     const htmlQuestion = document.getElementById('question');
     const htmlAnswer = document.getElementById('answers');
-    const nextButton = document.getElementsByClassName('nxt-button')[0];
+    const nextButton = document.getElementsByClassName('nxt-button');
 
     let currentQuestionIndex = 0;
     let score = 0;
@@ -75,7 +75,7 @@ var questions = [
     function startQuiz() {
         alert('Quiz started');
         score = 0;
-        nextButton.innerHTML = "Next";
+        //nextButton.innerHTML = "Next";
         displayQuiz()
     }
 
@@ -93,7 +93,7 @@ var questions = [
             htmlAnswer.appendChild(button);
         });
     }
-    nextButton.addEventListener('click', function() {
+    /*nextButton.addEventListener('click', function() {
         // Increment currentQuestionIndex when next button is clicked
         currentQuestionIndex++;
         if (currentQuestionIndex < questions.length) {
@@ -103,22 +103,15 @@ var questions = [
             alert('Quiz finished');
             // You can add your quiz completion logic here
         }
-    });
+    });*/
+
     function resetCurrentQuestion() {
-        nextButton.style.display = "none";
+        //nextButton.style.display = "block";
         while(htmlAnswer.firstChild) {
             htmlAnswer.removeChild(htmlAnswer.firstChild);
         }
     }
     
-    // Attach event listener to the HTML button
-    const htmlQuizButton = document.getElementById('htmlQuizButton');
-    if (htmlQuizButton) {
-        htmlQuizButton.addEventListener('click', function() {
-            htmlQuizQuestions();
-        });
-    }
-
 function htmlQuizQuestions() {
     let swap = document.getElementById('options').style.display !== 'none';
     if (swap == true) {
