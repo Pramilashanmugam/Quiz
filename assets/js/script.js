@@ -8,8 +8,6 @@ function goToInstructions() {
         document.getElementById('container').style.display = 'block';
         document.getElementById('instructions').style.display = 'none';
     }
-
-
 }
 
 function jumpToOptions() {
@@ -17,16 +15,6 @@ function jumpToOptions() {
     if (swap == true) {
         document.getElementById('instructions').style.display = 'none';
         document.getElementById('options').style.display = 'block';
-    }
-}
-
-function htmlQuizQuestions() {
-    alert('quiz started');
-    let swap = document.getElementById('options').style.display !== 'none';
-    if (swap == true) {
-        document.getElementById('options').style.display = 'none';
-        document.getElementById('quiz').style.display = 'block';
-        startQuiz();
     }
 }
 
@@ -77,33 +65,67 @@ var questions = [
         ]
     }
 ];
+    const htmlQuestion = document.getElementById('question');
+    const htmlAnswer = document.getElementById('answers');
+    const nextButton = document.getElementsByClassName('nxt-button')[0];
 
-let htmlQuestion = document.getElementById('question');
-let htmlAnswer = document.getElementById('answers');
-let nextButton = document.getElementById('nxt-button');
-var currentQuestionIndex;
-var score;
+    let currentQuestionIndex = 0;
+    let score = 0;
 
-function startQuiz() {
-    alert('check');
-    currentQuestionIndex = 0;
-    score = 0;
-    nextButton.innerHTML="Next";
-    displayQuiz()
-}
+    function startQuiz() {
+        alert('Quiz started');
+        score = 0;
+        nextButton.innerHTML = "Next";
+        displayQuiz()
+    }
 
-function displayQuiz() {
-    
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNum = currentQuestionIndex + 1;
-    htmlQuestion.innerHTML= questionNum + '. ' + currentQuestion.question;
+    function displayQuiz() {
+        resetCurrentQuestion();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNum = currentQuestionIndex + 1;
+        htmlQuestion.innerHTML = questionNum + '. ' + currentQuestion.question;
 
-    currentQuestion.answer.forEach(answer => {
-        let button = document.createElement('button');
-        button.innerHTML = answer.text;
-        button.classList.add('ans-button');
-        htmlAnswer.appendChild(button);
+        // Clear previous answers
+        currentQuestion.answer.forEach(answer => {
+            let button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("ans-button");
+            htmlAnswer.appendChild(button);
+        });
+    }
+    nextButton.addEventListener('click', function() {
+        // Increment currentQuestionIndex when next button is clicked
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            displayQuiz();
+        } else {
+            // Quiz finished
+            alert('Quiz finished');
+            // You can add your quiz completion logic here
+        }
     });
+    function resetCurrentQuestion() {
+        nextButton.style.display = "none";
+        while(htmlAnswer.firstChild) {
+            htmlAnswer.removeChild(htmlAnswer.firstChild);
+        }
+    }
+    
+    // Attach event listener to the HTML button
+    const htmlQuizButton = document.getElementById('htmlQuizButton');
+    if (htmlQuizButton) {
+        htmlQuizButton.addEventListener('click', function() {
+            htmlQuizQuestions();
+        });
+    }
+
+function htmlQuizQuestions() {
+    let swap = document.getElementById('options').style.display !== 'none';
+    if (swap == true) {
+        document.getElementById('options').style.display = 'none';
+        document.getElementById('quiz').style.display = 'block';
+        startQuiz();
+    }
 }
 
 function cssQuizQuestions() {
@@ -112,7 +134,7 @@ function cssQuizQuestions() {
     if (swap == true) {
         document.getElementById('options').style.display = 'none';
         document.getElementById('quiz').style.display = 'block';
-       
+
     }
 
 }
@@ -122,7 +144,7 @@ function javascriptQuizQuestions() {
     if (swap == true) {
         document.getElementById('options').style.display = 'none';
         document.getElementById('quiz').style.display = 'block';
-       
+
     }
 
 }
