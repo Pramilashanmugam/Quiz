@@ -19,7 +19,10 @@ body {
     background-repeat: no-repeat;
 }
 
-#container, #instructions, #options, #quiz {
+#container,
+#instructions,
+#options,
+#quiz {
     background-color: rgb(98, 0, 0);
     position: relative;
     width: 100%;
@@ -28,19 +31,20 @@ body {
     border-radius: 20px;
     margin: auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    ;
 }
 
-h1, h2 {
+h1,
+h2 {
     padding: 10px;
     color: whitesmoke;
     margin: 10px;
 }
+
 p {
     color: #ff8000;
 }
 
-.values{
+.values {
     color: #ff8000;
 }
 
@@ -59,29 +63,33 @@ p {
 
 .button:hover {
     background-color: #ff8000;
-    color:whitesmoke;
+    color: whitesmoke;
 }
+
 .hide {
     display: none;
 }
+
 label {
-    color:#ff8000;
+    color: #ff8000;
     margin: 10px;
 }
 
 #question {
-    color:#ff8000;
+    color: #ff8000;
     margin: 10px;
 }
+
 .ans-button {
     background-color: whitesmoke;
-    color:black;
+    color: black;
     width: 90%;
     height: auto;
     padding: 10px;
     margin: 5px;
     text-align: left;
 }
+
 .nxt-button {
     padding: 10px 20px;
     margin: 15px;
@@ -93,7 +101,8 @@ label {
     border-radius: 10px;
     cursor: pointer;
 }
+
 .nxt-button:hover {
     background-color: #ff8000;
-    color:whitesmoke;
+    color: whitesmoke;
 }
