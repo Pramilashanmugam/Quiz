@@ -49,33 +49,34 @@ var questions = [
     {
         question: "Choose the correct HTML element for the largest heading:",
         answer: [
-            { text: '<head>', correct: false },
-            { text: '<heading>', correct: false },
-            { text: '<h1>', correct: true },
-            { text: '<h6>', correct: false },
+            { text: '&lt;head&gt;', correct: false },
+            { text: "&lt;heading&gt;", correct: false },
+            { text: '&lt;h1&gt;', correct: true },
+            { text: '&lt;h6&gt;', correct: false },
         ]
     },
     {
         question: "Choose the correct HTML element to define important text",
         answer: [
-            { text: '<important>', correct: false },
-            { text: '<strong>', correct: true },
-            { text: '<i>', correct: false },
-            { text: '<b>', correct: false },
+            { text: '&lt;important&gt;', correct: false },
+            { text: '&lt;strong&gt;', correct: true },
+            { text: '&lt;i&gt;', correct: false },
+            { text: '&lt;b&gt;', correct: false },
         ]
     }
 ];
     const htmlQuestion = document.getElementById('question');
     const htmlAnswer = document.getElementById('answers');
-    const nextButton = document.getElementsByClassName('nxt-button');
+    const nextButton = document.getElementById('nxt-button');
 
     let currentQuestionIndex = 0;
     let score = 0;
 
     function startQuiz() {
         alert('Quiz started');
+        shuffledQuestions = questions.sort(() => Math.random() - .5);
         score = 0;
-        //nextButton.innerHTML = "Next";
+        nextButton.innerHTML = "Next";
         displayQuiz()
     }
 
@@ -87,29 +88,25 @@ var questions = [
 
         // Clear previous answers
         currentQuestion.answer.forEach(answer => {
-            let button = document.createElement("button");
+            const button = document.createElement("button");
             button.innerHTML = answer.text;
             button.classList.add("ans-button");
+            if (answer.correct) {
+                button.dataset.correct = answer.correct
+              }
+              button.addEventListener('click', selectAnswer)
             htmlAnswer.appendChild(button);
         });
     }
-    /*nextButton.addEventListener('click', function() {
-        // Increment currentQuestionIndex when next button is clicked
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            displayQuiz();
-        } else {
-            // Quiz finished
-            alert('Quiz finished');
-            // You can add your quiz completion logic here
-        }
-    });*/
-
+    
     function resetCurrentQuestion() {
-        //nextButton.style.display = "block";
-        while(htmlAnswer.firstChild) {
+        nextButton.classList.add('hide');
+            while(htmlAnswer.firstChild) {
             htmlAnswer.removeChild(htmlAnswer.firstChild);
         }
+    }
+    function selectAnswer(e) {
+     alert('empty');
     }
     
 function htmlQuizQuestions() {
