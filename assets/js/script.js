@@ -1,3 +1,4 @@
+// this function to go to option div on clicking ready button and to go to main page if exit clicked
 function goToInstructions() {
 
     let swap = document.getElementById('container').style.display !== 'none';
@@ -10,6 +11,7 @@ function goToInstructions() {
     }
 }
 
+// func to display option of quizes available 
 function jumpToOptions() {
     let swap = document.getElementById('instructions').style.display !== 'none';
     if (swap == true) {
@@ -17,11 +19,11 @@ function jumpToOptions() {
         document.getElementById('options').style.display = 'block';
     }
 }
-
+// question and answer array for html quiz
 var questions = [
     {
         question: "What does HTML stand for?",
-        answer: [
+        answers: [
             { text: 'Hyper Text Markup Language', correct: true },
             { text: 'Home Tool Markup Language', correct: false },
             { text: 'Hyperlinks and Text Markup Language', correct: false },
@@ -30,8 +32,8 @@ var questions = [
     },
     {
         question: "Which character is used to indicate an end tag?",
-        answer: [
-            { text: '<', correct: true },
+        answers: [
+            { text: '<', correct: false },
             { text: '*', correct: false },
             { text: '^', correct: false },
             { text: '/', correct: true },
@@ -39,7 +41,7 @@ var questions = [
     },
     {
         question: "Who is making the Web standards?",
-        answer: [
+        answers: [
             { text: 'The World Wide Web Consortium', correct: true },
             { text: 'Mozilla', correct: false },
             { text: 'Google', correct: false },
@@ -48,7 +50,7 @@ var questions = [
     },
     {
         question: "Choose the correct HTML element for the largest heading:",
-        answer: [
+        answers: [
             { text: '&lt;head&gt;', correct: false },
             { text: "&lt;heading&gt;", correct: false },
             { text: '&lt;h1&gt;', correct: true },
@@ -57,7 +59,7 @@ var questions = [
     },
     {
         question: "Choose the correct HTML element to define important text",
-        answer: [
+        answers: [
             { text: '&lt;important&gt;', correct: false },
             { text: '&lt;strong&gt;', correct: true },
             { text: '&lt;i&gt;', correct: false },
@@ -66,18 +68,23 @@ var questions = [
     }
 ];
     const htmlQuestion = document.getElementById('question');
-    const htmlAnswer = document.getElementById('answers');
+    const htmlAnswers = document.getElementById('answers');
     const nextButton = document.getElementById('nxt-button');
 
     let currentQuestionIndex = 0;
     let score = 0;
+    let shuffledQuestions;
+    nextButton.addEventListener('click', () => {
+        currentQuestionIndex++;
+        displayQuiz()
+      })
 
     function startQuiz() {
         alert('Quiz started');
-        shuffledQuestions = questions.sort(() => Math.random() - .5);
+        shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffles the questions randomly
         score = 0;
         nextButton.innerHTML = "Next";
-        displayQuiz()
+        displayQuiz();
     }
 
     function displayQuiz() {
@@ -87,28 +94,49 @@ var questions = [
         htmlQuestion.innerHTML = questionNum + '. ' + currentQuestion.question;
 
         // Clear previous answers
-        currentQuestion.answer.forEach(answer => {
+        currentQuestion.answers.forEach(answer => {  // code from line 97 till 138 inspired from youtube channel Web Dev Simplified. (please find it in readme)
             const button = document.createElement("button");
             button.innerHTML = answer.text;
             button.classList.add("ans-button");
             if (answer.correct) {
-                button.dataset.correct = answer.correct
+                button.dataset.correct = answer.correct;
               }
-              button.addEventListener('click', selectAnswer)
-            htmlAnswer.appendChild(button);
+              button.addEventListener('click', selectAnswer);
+            htmlAnswers.appendChild(button);
         });
     }
     
     function resetCurrentQuestion() {
-        nextButton.classList.add('hide');
-            while(htmlAnswer.firstChild) {
-            htmlAnswer.removeChild(htmlAnswer.firstChild);
+        nextButton.classList.add('hide');// hiding the nextbutton from displaying
+            while(htmlAnswers.firstChild) {
+            htmlAnswers.removeChild(htmlAnswers.firstChild);
         }
     }
     function selectAnswer(e) {
-     alert('empty');
+    const selectedButton = e.target;
+    const correct = selectedButton.dataset.correct;
+    setStatusClass(document.body, correct);
+    Array.from(htmlAnswers.children).forEach(button => {
+        //alert(button.dataset.correct);
+        setStatusClass(button, button.dataset.correct)
+      })
+      if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+      } else {
+        // this block execute at the last question
+
+      }
     }
-    
+
+    function setStatusClass(element, correct) {
+        //clearStatusClass(element)
+        if (correct) {
+          element.classList.add('correct')
+        } else {
+          element.classList.add('wrong')
+        }
+      }
+
 function htmlQuizQuestions() {
     let swap = document.getElementById('options').style.display !== 'none';
     if (swap == true) {
