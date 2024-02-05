@@ -11,7 +11,7 @@ function goToInstructions() {
     }
 }
 
-// func to display option of quizes available 
+// func to display option of available quizes
 function jumpToOptions() {
     let swap = document.getElementById('instructions').style.display !== 'none';
     if (swap == true) {
@@ -20,7 +20,7 @@ function jumpToOptions() {
     }
 }
 // question and answer array for html quiz
-var questions = [
+let questions = [
     {
         question: "What does HTML stand for?",
         answers: [
@@ -67,75 +67,82 @@ var questions = [
         ]
     }
 ];
-    const htmlQuestion = document.getElementById('question');
-    const htmlAnswers = document.getElementById('answers');
-    const nextButton = document.getElementById('nxt-button');
+const htmlQuestion = document.getElementById('question');
+const htmlAnswers = document.getElementById('answers');
+const nextButton = document.getElementById('nxt-button');
 
-    let currentQuestionIndex = 0;
-    let score = 0;
-    let shuffledQuestions;
-    nextButton.addEventListener('click', () => {
-        currentQuestionIndex++;
-        displayQuiz()
-      })
+let currentQuestionIndex = 0;
+let score = 0;
+let shuffledQuestions;
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++;
+    displayQuiz();
+});
 
-    function startQuiz() {
-        alert('Quiz started');
-        shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffles the questions randomly
-        score = 0;
-        nextButton.innerHTML = "Next";
-        displayQuiz();
-    }
+function startQuiz() {
+    alert('Quiz started');
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffles the questions randomly
+    score = 0;
+    nextButton.innerHTML = "Next";
+    displayQuiz();
+}
 
-    function displayQuiz() {
-        resetCurrentQuestion();
-        let currentQuestion = questions[currentQuestionIndex];
-        let questionNum = currentQuestionIndex + 1;
-        htmlQuestion.innerHTML = questionNum + '. ' + currentQuestion.question;
+function displayQuiz() {
+    resetCurrentQuestion();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNum = currentQuestionIndex + 1;
+    htmlQuestion.innerHTML = questionNum + '. ' + currentQuestion.question;
 
-        // Clear previous answers
-        currentQuestion.answers.forEach(answer => {  // code from line 97 till 138 inspired from youtube channel Web Dev Simplified. (please find it in readme)
-            const button = document.createElement("button");
-            button.innerHTML = answer.text;
-            button.classList.add("ans-button");
-            if (answer.correct) {
-                button.dataset.correct = answer.correct;
-              }
-              button.addEventListener('click', selectAnswer);
-            htmlAnswers.appendChild(button);
-        });
-    }
-    
-    function resetCurrentQuestion() {
-        nextButton.classList.add('hide');// hiding the nextbutton from displaying
-            while(htmlAnswers.firstChild) {
-            htmlAnswers.removeChild(htmlAnswers.firstChild);
+    // Clear previous answers
+    currentQuestion.answers.forEach(answer => {  // code from line 97 till 114 inspired from youtube channel "Web Dev Simplified" however its customised (please find it in readme)
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("ans-button");
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
         }
+        button.addEventListener('click', selectAnswer);
+        htmlAnswers.appendChild(button);
+    });
+}
+// this function is to replace the questions everytime
+function resetCurrentQuestion() {
+    nextButton.classList.add('hide');// hiding the nextbutton from displaying
+    while (htmlAnswers.firstChild) {
+        htmlAnswers.removeChild(htmlAnswers.firstChild);
     }
-    function selectAnswer(e) {
+}
+
+function selectAnswer(e) {
     const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct;
-    setStatusClass(document.body, correct);
-    Array.from(htmlAnswers.children).forEach(button => {
-        //alert(button.dataset.correct);
-        setStatusClass(button, button.dataset.correct)
-      })
-      if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide')
-      } else {
+    const correct = selectedButton.dataset.correct === "true"; // checking the selectedbuttons value with dataset
+    if (correct) {
+        selectedButton.classList.add("correct");            // if the selected button is true then class name correct will be added and the button will change to green colour
+    } else {
+        selectedButton.classList.add("incorrect");          // if the selected button is false then class name incorrect will be added and the button will change to red colour
+    }
+    Array.from(htmlAnswers.children).forEach(button => {    // for each button it will whether the dataset is true
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct");                // if the condition is true it will add the class name correct 
+        }
+        button.disabled = true;                             // disabling the multiple time click once the answer is selected
+    });
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide');
+    } else {
         // this block execute at the last question
 
-      }
     }
+}
 
-    function setStatusClass(element, correct) {
-        //clearStatusClass(element)
-        if (correct) {
-          element.classList.add('correct')
-        } else {
-          element.classList.add('wrong')
-        }
-      }
+function setStatusClass(element, correct) {
+    //clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+    }
+}
 
 function htmlQuizQuestions() {
     let swap = document.getElementById('options').style.display !== 'none';

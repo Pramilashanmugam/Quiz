@@ -5,8 +5,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+/*styling for main page*/
+main {
     font-family: Arial, sans-serif;
     text-align: center;
     display: flex;
@@ -18,7 +18,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-
+/* each division has been styled in same pattern*/
 #container,
 #instructions,
 #options,
@@ -32,14 +32,14 @@ body {
     margin: auto;
     box-shadow: 0 0 10px 2px;
 }
-
+/* Heading elements padding and font colors*/
 h1,
 h2 {
     padding: 10px;
     color: whitesmoke;
     margin: 10px;
 }
-
+/* paragraph element font colors*/
 p {
     color: #ff8000;
 }
@@ -47,7 +47,7 @@ p {
 .values {
     color: #ff8000;
 }
-
+/* Each buttons are styled in similar pattern*/
 .button {
     display: inline-flex;
     padding: 10px 20px;
@@ -58,15 +58,15 @@ p {
     color: black;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer;/* on cursor pointing to each button the pointer style will be displayed*/
     box-shadow: 0 0 10px 2px;
 }
-
+/* when mouse is hovered you will see the diff font and background color*/
 .button:hover {
     background-color: #ff8000;
     color: whitesmoke;
 }
-
+/* to hide the buttons*/
 .hide {
     display: none;
 }
@@ -92,10 +92,10 @@ label {
     cursor:pointer;
 }
 
-.ans-button:hover {
+/*.ans-button:hover {
     background-color: #ff8000;
     color: whitesmoke;
-}
+}*/
 
 #nxt-button {
     padding: 10px 20px;
@@ -116,8 +116,27 @@ label {
 .ans-button.correct {
     background-color: teal;
     color:whitesmoke;
+    font-weight: 600;
     }
-.ans-button.wrong {
-    background-color:rgb(255, 248, 226);
-    color:black;
+.ans-button.incorrect {
+    background-color:#ff9393;
+    color:whitesmoke;
+    font-weight: 600;
+}
+
+/*404.html page*/
+.notfound {
+    text-align: center;
+    justify-content: space-around;
+}
+
+.notfound>h1,
+.notfound>h2,
+.notfound>p {
+    color: rgb(98, 0, 0);
+}
+
+.errormsg {
+    width: 50%;
+    margin: 0 25%;
 }
