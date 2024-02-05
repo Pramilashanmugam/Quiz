@@ -89,6 +89,12 @@ label {
     padding: 10px;
     margin: 5px;
     text-align: left;
+    cursor:pointer;
+}
+
+.ans-button:hover {
+    background-color: #ff8000;
+    color: whitesmoke;
 }
 
 #nxt-button {
@@ -103,7 +109,15 @@ label {
     cursor: pointer;
 }
 
-.nxt-button:hover {
+#nxt-button:hover {
     background-color: #ff8000;
     color: whitesmoke;
+}
+.ans-button.correct {
+    background-color: teal;
+    color:whitesmoke;
+    }
+.ans-button.wrong {
+    background-color:rgb(255, 248, 226);
+    color:black;
 }

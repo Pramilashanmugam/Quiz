@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Title of the website-->
     <title>Quiz to check your knowledge</title>
-    <!--Stylesheets-->
+    <!--link to Stylesheets-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-
 </head>
-
 <body>
     <!--Main division of the quiz container-->
     <div id="container">
@@ -33,7 +31,7 @@
         <button id="ready-btn" class="button" onclick="jumpToOptions()">Ready</button>
         <button id="exit-btn" class="button" onclick="goToInstructions()">Exit</button>
     </div>
-    <!--a division to display the options to choose-->
+    <!--a division to display the options to choose between 3 quiz type-->
     <div id="options" class="hide">
         <h2>Lets go for it..</h2>
         <p>Choose your option below</p>
@@ -41,6 +39,7 @@
         <button id="css-btn" class="button" onclick="cssQuizQuestions()">CSS</button>
         <button id="javascript-btn" class="button" onclick="javascriptQuizQuestions()">JavaScript</button>
     </div>
+    <!--division to display the question and answers-->
     <div id="quiz" class="hide">
         <h3 id="question">Display Question here:</h3>
         <div id="answers">
@@ -51,6 +50,7 @@
         </div>
         <button id="nxt-button" class="hide">Next</button>
     </div>
+    <!--link to javascript file-->
     <script src="assets/js/script.js"></script>
 </body>
 
