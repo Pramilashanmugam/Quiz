@@ -92,7 +92,7 @@ label {
     cursor:pointer;
     font-weight: 600;
 }
-
+/* hover effect will work only when the button is not disabled*/
 .ans-button:hover:not([disabled]) {
     background-color: #ff8000;
     color: whitesmoke;

@@ -91,7 +91,7 @@ function displayQuiz() {
     reset();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNum = currentQuestionIndex + 1;
-    htmlQuestion.innerHTML = questionNum + '. ' + currentQuestion.question;
+    htmlQuestion.innerHTML = questionNum + '. ' + currentQuestion.question; // displaying the currentquestion with the  question no
 
     // Clear previous answers
     currentQuestion.answers.forEach(answer => {  // code from line 97 till 114 inspired from youtube channel "Web Dev Simplified" however its customised (please find it in readme)
@@ -107,7 +107,7 @@ function displayQuiz() {
 }
 // this function is to replace the questions everytime
 function reset() {
-    nextButton.classList.add('hide');// hiding the nextbutton from displaying
+    nextButton.classList.add('none');// hiding the nextbutton from displaying
     while (htmlAnswers.firstChild) {
         htmlAnswers.removeChild(htmlAnswers.firstChild);
     }
@@ -144,8 +144,14 @@ function displayScore() {
         htmlQuestion.innerHTML = `Congratulations! you have scored ${score} out of ${shuffledQuestions.length}! You are almost there, Try again`;
     } else if (score < 3) {
         htmlQuestion.innerHTML = `Your score is ${score} out of ${shuffledQuestions.length}! Goodluck for your next attempt.`;
-    }
+    } nextButton.innerHTML = `Play Again`;  
+    nextButton.addEventListener('click', playAgain);  
 }
+
+function playAgain() {
+alert("lets play");
+}
+
 function htmlQuizQuestions() {
     let swap = document.getElementById('options').style.display !== 'none';
     if (swap == true) {
