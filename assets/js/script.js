@@ -88,7 +88,7 @@ function startQuiz() {
 }
 
 function displayQuiz() {
-    resetCurrentQuestion();
+    reset();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNum = currentQuestionIndex + 1;
     htmlQuestion.innerHTML = questionNum + '. ' + currentQuestion.question;
@@ -106,7 +106,7 @@ function displayQuiz() {
     });
 }
 // this function is to replace the questions everytime
-function resetCurrentQuestion() {
+function reset() {
     nextButton.classList.add('hide');// hiding the nextbutton from displaying
     while (htmlAnswers.firstChild) {
         htmlAnswers.removeChild(htmlAnswers.firstChild);
@@ -118,6 +118,7 @@ function selectAnswer(e) {
     const correct = selectedButton.dataset.correct === "true"; // checking the selectedbuttons value with dataset
     if (correct) {
         selectedButton.classList.add("correct");            // if the selected button is true then class name correct will be added and the button will change to green colour
+        score++;
     } else {
         selectedButton.classList.add("incorrect");          // if the selected button is false then class name incorrect will be added and the button will change to red colour
     }
@@ -130,20 +131,21 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
-        // this block execute at the last question
-
+        displayScore();
     }
 }
 
-function setStatusClass(element, correct) {
-    //clearStatusClass(element)
-    if (correct) {
-        element.classList.add('correct');
-    } else {
-        element.classList.add('wrong');
+// function to display the score
+function displayScore() {
+    reset();
+    if (score === 5) {
+        htmlQuestion.innerHTML = `Awesome! You nailed it! Your score is ${score} out of ${shuffledQuestions.length}!`;
+    } else if (score === 3 || score === 4) {
+        htmlQuestion.innerHTML = `Congratulations! you have scored ${score} out of ${shuffledQuestions.length}! You are almost there, Try again`;
+    } else if (score < 3) {
+        htmlQuestion.innerHTML = `Your score is ${score} out of ${shuffledQuestions.length}! Goodluck for your next attempt.`;
     }
 }
-
 function htmlQuizQuestions() {
     let swap = document.getElementById('options').style.display !== 'none';
     if (swap == true) {
