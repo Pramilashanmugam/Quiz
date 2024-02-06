@@ -101,24 +101,46 @@ const finalScore =document.getElementById('finalscore');
 let currentQuestionIndex;
 let score = 0;
 let shuffledQuestions;
+let quizstate;
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
-    displayQuiz();
+    displayQuiz(quizstate);
 });
 
-function startQuiz() {
+function startQuiz(val) {
+    quizstate = val;
+    //alert('quizstate: ' + quizstate);
     currentQuestionIndex = 0;
-   // alert('startQuiz');
+    //alert('startQuiz: ' + val);
+   if(val=="html"){
+    //alert("go to html");
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffles the questions randomly
+   }
+   else if(val=='css'){
+    //alert("go to CSS");
+    shuffledQuestions = cssquestions.sort(() => Math.random() - 0.5);
+   } else if (val == 'javascript')   {
+    alert('go to javacript');
+    shuffledQuestions = jsquestions.sort(() => Math.random() - 0.5);
+   }
     score = 0;
     nextButton.innerHTML = "Next";
-    displayQuiz();
-}
+    displayQuiz(val);
+ }
+ 
 
-function displayQuiz() {
+ function displayQuiz(val) {
     //alert('displayQuiz');
     reset();
-    let currentQuestion = questions[currentQuestionIndex];
+    let currentQuestion;
+    if(val=='html'){
+        currentQuestion= questions[currentQuestionIndex];
+    }else if(val=='css'){
+        currentQuestion= cssquestions[currentQuestionIndex];
+    } else if (val == 'javascript') {
+        currentQuestion= jsquestions[currentQuestionIndex];
+    }
+ 
     let questionNum = currentQuestionIndex + 1;
     htmlQuestion.innerHTML = questionNum + '. ' + currentQuestion.question; // displaying the currentquestion with the  question no
 
@@ -189,34 +211,86 @@ function playAgain() {
         document.getElementById('result').style.display = 'none';
         document.getElementById('container').style.display = 'block';
     } 
-    startQuiz();
+    //startQuiz();
 }
 /**
  *  
  */
-function htmlQuizQuestions() { 
+function htmlQuizQuestions() {
     let swap = document.getElementById('options').style.display !== 'none';
     if (swap == true) {
         document.getElementById('options').style.display = 'none';
         document.getElementById('quiz').style.display = 'block';
-        startQuiz();
+        startQuiz("html");
     }
-}
-
-
-//TBD
-function cssQuizQuestions() {
+ }
+ 
+  //TBD
+ function cssQuizQuestions() {
     alert('quiz started');
     let swap = document.getElementById('options').style.display !== 'none';
     if (swap == true) {
         document.getElementById('options').style.display = 'none';
         document.getElementById('quiz').style.display = 'block';
-       
+        startQuiz("css");
     }
+ }
 
-}
+//CSS question here
+let cssquestions = [
+    {
+        question: "CCS q1?",
+        answers: [
+            { text: 'CCS q1', correct: true },
+            { text: 'Home Tool Markup Language', correct: false },
+            { text: 'Hyperlinks and Text Markup Language', correct: false },
+            { text: 'Hyper Type Markup Language', correct: false },
+        ]
+    },
+    {
+        question: "CCS q2?",
+        answers: [
+            { text: '<', correct: false },
+            { text: '*', correct: false },
+            { text: '^', correct: false },
+            { text: 'CCS q2', correct: true },
+        ]
+    },
+    {
+        question: "CCS q3?",
+        answers: [
+            { text: 'CCS q3', correct: true },
+            { text: 'Mozilla', correct: false },
+            { text: 'Google', correct: false },
+            { text: 'Microsoft', correct: false },
+        ]
+    },
+    {
+        question: "CCS q4",
+        answers: [
+            { text: '&lt;head&gt;', correct: false },
+            { text: "&lt;heading&gt;", correct: false },
+            { text: 'CCS q4', correct: true },
+            { text: '&lt;h6&gt;', correct: false },
+        ]
+    },
+    {
+        question: "CCS q5",
+        answers: [
+            { text: '&lt;important&gt;', correct: false },
+            { text: 'CCS q5', correct: true },
+            { text: '&lt;i&gt;', correct: false },
+            { text: '&lt;b&gt;', correct: false },
+        ]
+    }
+ ];
+ // end of CSS question
+ 
+ 
+ 
 
-
+ 
+ 
 //TBD
 function javascriptQuizQuestions() {
     alert('quiz started');
@@ -224,6 +298,55 @@ function javascriptQuizQuestions() {
     if (swap == true) {
         document.getElementById('options').style.display = 'none';
         document.getElementById('quiz').style.display = 'block';
-    }
+    } startQuiz('javascript');
 
 }
+//js question here
+let jsquestions = [
+    {
+        question: "js q1?",
+        answers: [
+            { text: 'js q1', correct: true },
+            { text: 'Home Tool Markup Language', correct: false },
+            { text: 'Hyperlinks and Text Markup Language', correct: false },
+            { text: 'Hyper Type Markup Language', correct: false },
+        ]
+    },
+    {
+        question: "js q2?",
+        answers: [
+            { text: '<', correct: false },
+            { text: '*', correct: false },
+            { text: '^', correct: false },
+            { text: 'js q2', correct: true },
+        ]
+    },
+    {
+        question: "js q3?",
+        answers: [
+            { text: 'js q3', correct: true },
+            { text: 'Mozilla', correct: false },
+            { text: 'Google', correct: false },
+            { text: 'Microsoft', correct: false },
+        ]
+    },
+    {
+        question: "js q4",
+        answers: [
+            { text: '&lt;head&gt;', correct: false },
+            { text: "&lt;heading&gt;", correct: false },
+            { text: 'js q4', correct: true },
+            { text: '&lt;h6&gt;', correct: false },
+        ]
+    },
+    {
+        question: "js q5",
+        answers: [
+            { text: '&lt;important&gt;', correct: false },
+            { text: 'js q5', correct: true },
+            { text: '&lt;i&gt;', correct: false },
+            { text: '&lt;b&gt;', correct: false },
+        ]
+    }
+ ];
+ // end of js question
