@@ -1,3 +1,19 @@
+// assigning the button by its id
+const startButton = document.getElementById('start-btn');
+const readyButton = document.getElementById('ready-btn');
+const exitButton = document.getElementById('exit-btn');
+const htmlButton = document.getElementById('html-btn');
+const cssButton = document.getElementById('css-btn');
+const jsButton = document.getElementById('javascript-btn');
+
+// onclick goes to the respective function
+htmlButton.addEventListener('click', htmlQuizQuestions);
+cssButton.addEventListener('click', cssQuizQuestions);
+jsButton.addEventListener('click', javascriptQuizQuestions);
+
+// Call the goToInstructions function when the button is clicked
+startButton.addEventListener('click', goToInstructions);
+
 // this function to go to option div on clicking ready button and to go to main page if exit clicked
 function goToInstructions() {
 
@@ -10,6 +26,12 @@ function goToInstructions() {
         document.getElementById('instructions').style.display = 'none';
     }
 }
+
+// Call the jumpToOptions function when the button is clicked
+readyButton.addEventListener('click', jumpToOptions);
+
+// returns to goToInstructions function
+exitButton.addEventListener('click', goToInstructions);
 
 // func to display option of available quizes
 function jumpToOptions() {
@@ -144,12 +166,19 @@ function displayScore() {
         htmlQuestion.innerHTML = `Congratulations! you have scored ${score} out of ${shuffledQuestions.length}! You are almost there, Try again`;
     } else if (score < 3) {
         htmlQuestion.innerHTML = `Your score is ${score} out of ${shuffledQuestions.length}! Goodluck for your next attempt.`;
-    } nextButton.innerHTML = `Play Again`;  
-    nextButton.addEventListener('click', playAgain);  
+    } nextButton.innerHTML = `Play Again`;
+    nextButton.addEventListener('click', playAgain);
 }
 
 function playAgain() {
-alert("lets play");
+    alert("lets play");
+    let swap = document.getElementById('quiz').style.display !== 'none';
+    if (swap == true) {
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('container').style.display = 'block';
+    }
+    shuffledQuestions = 0;
+    displayQuiz();
 }
 
 function htmlQuizQuestions() {
