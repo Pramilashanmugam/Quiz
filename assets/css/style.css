@@ -22,7 +22,7 @@ main {
 #container,
 #instructions,
 #options,
-#quiz {
+#quiz, #result{
     background-color: rgb(98, 0, 0);
     position: relative;
     width: 100%;
@@ -34,7 +34,7 @@ main {
 }
 /* Heading elements padding and font colors*/
 h1,
-h2 {
+h2, #finalscore {
     padding: 10px;
     color: whitesmoke;
     margin: 10px;
@@ -98,7 +98,7 @@ label {
     color: whitesmoke;
 }
 
-#nxt-button {
+#nxt-button, #replay-button {
     padding: 10px 20px;
     margin: 15px;
     font-size: 16px;
@@ -110,7 +110,7 @@ label {
     cursor: pointer;
 }
 
-#nxt-button:hover {
+#nxt-button:hover, #replay-button:hover {
     background-color: #ff8000;
     color: whitesmoke;
 }

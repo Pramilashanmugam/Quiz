@@ -5,6 +5,8 @@ const exitButton = document.getElementById('exit-btn');
 const htmlButton = document.getElementById('html-btn');
 const cssButton = document.getElementById('css-btn');
 const jsButton = document.getElementById('javascript-btn');
+const nextButton = document.getElementById('nxt-button');
+const replayButton = document.getElementById('replay-button');
 
 // onclick goes to the respective function
 htmlButton.addEventListener('click', htmlQuizQuestions);
@@ -89,11 +91,14 @@ let questions = [
         ]
     }
 ];
+
+
+
 const htmlQuestion = document.getElementById('question');
 const htmlAnswers = document.getElementById('answers');
-const nextButton = document.getElementById('nxt-button');
+const finalScore =document.getElementById('finalscore');
 
-let currentQuestionIndex = 0;
+let currentQuestionIndex;
 let score = 0;
 let shuffledQuestions;
 nextButton.addEventListener('click', () => {
@@ -102,7 +107,8 @@ nextButton.addEventListener('click', () => {
 });
 
 function startQuiz() {
-    alert('Quiz started');
+    currentQuestionIndex = 0;
+   // alert('startQuiz');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // shuffles the questions randomly
     score = 0;
     nextButton.innerHTML = "Next";
@@ -110,6 +116,7 @@ function startQuiz() {
 }
 
 function displayQuiz() {
+    //alert('displayQuiz');
     reset();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNum = currentQuestionIndex + 1;
@@ -129,7 +136,8 @@ function displayQuiz() {
 }
 // this function is to replace the questions everytime
 function reset() {
-    nextButton.classList.add('none');// hiding the nextbutton from displaying
+    //alert("reset fn is called");
+    nextButton.classList.add('hide');// hiding the nextbutton from displaying    
     while (htmlAnswers.firstChild) {
         htmlAnswers.removeChild(htmlAnswers.firstChild);
     }
@@ -160,28 +168,33 @@ function selectAnswer(e) {
 // function to display the score
 function displayScore() {
     reset();
+    let swap = document.getElementById('quiz').style.display !== 'none';
+    if (swap == true) {       
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+    }
     if (score === 5) {
-        htmlQuestion.innerHTML = `Awesome! You nailed it! Your score is ${score} out of ${shuffledQuestions.length}!`;
+        finalScore.innerHTML = `Awesome! You nailed it! Your score is ${score} out of ${shuffledQuestions.length}!`;
     } else if (score === 3 || score === 4) {
-        htmlQuestion.innerHTML = `Congratulations! you have scored ${score} out of ${shuffledQuestions.length}! You are almost there, Try again`;
+        finalScore.innerHTML = `Congratulations! you have scored ${score} out of ${shuffledQuestions.length}! You are almost there, Try again`;
     } else if (score < 3) {
-        htmlQuestion.innerHTML = `Your score is ${score} out of ${shuffledQuestions.length}! Goodluck for your next attempt.`;
-    } nextButton.innerHTML = `Play Again`;
-    nextButton.addEventListener('click', playAgain);
+        finalScore.innerHTML = `Your score is ${score} out of ${shuffledQuestions.length}! Goodluck for your next attempt.`;
+    } 
+    replayButton.addEventListener('click', playAgain);
 }
 
 function playAgain() {
-    alert("lets play");
-    let swap = document.getElementById('quiz').style.display !== 'none';
+    let swap = document.getElementById('result').style.display !== 'none';
     if (swap == true) {
-        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'none';
         document.getElementById('container').style.display = 'block';
-    }
-    shuffledQuestions = 0;
-    displayQuiz();
+    } 
+    startQuiz();
 }
-
-function htmlQuizQuestions() {
+/**
+ *  
+ */
+function htmlQuizQuestions() { 
     let swap = document.getElementById('options').style.display !== 'none';
     if (swap == true) {
         document.getElementById('options').style.display = 'none';
@@ -190,23 +203,27 @@ function htmlQuizQuestions() {
     }
 }
 
+
+//TBD
 function cssQuizQuestions() {
     alert('quiz started');
     let swap = document.getElementById('options').style.display !== 'none';
     if (swap == true) {
         document.getElementById('options').style.display = 'none';
         document.getElementById('quiz').style.display = 'block';
-
+       
     }
 
 }
+
+
+//TBD
 function javascriptQuizQuestions() {
     alert('quiz started');
     let swap = document.getElementById('options').style.display !== 'none';
     if (swap == true) {
         document.getElementById('options').style.display = 'none';
         document.getElementById('quiz').style.display = 'block';
-
     }
 
 }
