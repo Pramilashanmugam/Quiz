@@ -1,3 +1,4 @@
+/* Asterisk wildcard selector to override default styles added by the browser */
 *,
 *::before,
 *::after {
@@ -18,7 +19,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
-/* each division has been styled in same pattern*/
+/* each division has been styled in similar background and font color to show uniformity*/
 #container,
 #instructions,
 #options,
@@ -32,21 +33,18 @@ main {
     margin: auto;
     box-shadow: 0 0 10px 2px;
 }
-/* Heading elements padding and font colors*/
+/* Heading elements*/
 h1,
 h2, #finalscore {
     padding: 10px;
     color: whitesmoke;
     margin: 10px;
 }
-/* paragraph element font colors*/
+/* paragraph element*/
 p {
     color: #ff8000;
 }
 
-.values {
-    color: #ff8000;
-}
 /* Each buttons are styled in similar pattern*/
 .button {
     display: inline-flex;
@@ -66,21 +64,18 @@ p {
     background-color: #ff8000;
     color: whitesmoke;
 }
-/* to hide the buttons*/
+/*division or button to hide*/
 .hide {
     display: none;
 }
 
-label {
-    color: #ff8000;
-    margin: 10px;
-}
-
+/* style of displaying question*/
 #question {
     color: #ff8000;
     margin: 10px;
 }
 
+/* style of answer buttons*/
 .ans-button {
     background-color: whitesmoke;
     color: black;
@@ -98,6 +93,7 @@ label {
     color: whitesmoke;
 }
 
+/* next button and play again button*/
 #nxt-button, #replay-button {
     padding: 10px 20px;
     margin: 15px;
@@ -110,15 +106,19 @@ label {
     cursor: pointer;
 }
 
+/*mouse hover effect on next and play again button*/
 #nxt-button:hover, #replay-button:hover {
     background-color: #ff8000;
     color: whitesmoke;
 }
+/*when the selected answer is correct the button changes to green color*/
 .ans-button.correct {
     background-color: teal;
     color:whitesmoke;
     font-weight: 600;
     }
+
+/*when the selected answer is correct the button changes to red color*/
 .ans-button.incorrect {
     background-color:#F57575;
     color:whitesmoke;

@@ -3,7 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Meta tags for search engines-->
+    <meta name="description" content="Quiz about html, css and javascript quiz, full stack development quiz ">
+    <meta name="keywords" content="quiz, html, css, javascript, random question, play again, quiz with score">
+    <meta name="author" content="Pramila Shanmugam">
     <!--Title of the website-->
     <title>Quiz to check your knowledge</title>
     <!--link to Stylesheets-->
@@ -13,48 +18,51 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
 </head>
+
 <body>
     <!--Main division of the quiz container-->
     <main>
-    <div id="container">
-        <h1>Quiz time</h1>
-        <p>Are you ready for the challenge?</p>
-        <!--button to go to instructions-->
-        <button id="start-btn" class="button">Start</button>
-    </div>
-    <!--displays the division container-->
-    <div id="instructions" class="hide">
-        <h2>Instructions before you start</h2>
-        <p>You can choose your topic between HTML, CSS and JavaScript</p>
-        <p>There are 10 questions in each topic</p>
-        <p>Every correct answer will be rewarded with 1 point</p>
-        <!--two buttons to choose between start the game or exit-->
-        <button id="ready-btn" class="button">Ready</button>
-        <button id="exit-btn" class="button">Exit</button>
-    </div>
-    <!--a division to display the options to choose between 3 quiz type-->
-    <div id="options" class="hide">
-        <h2>Lets go for it..</h2>
-        <p>Choose your option below</p>
-        <button id="html-btn" class="button">HTML</button>
-        <button id="css-btn" class="button">CSS</button>
-        <button id="javascript-btn" class="button">JavaScript</button>
-    </div>
-    <!--division to display the question and answers-->
-    <div id="quiz" class="hide">
-        <h3 id="question">Display Question here:</h3>
-        <div id="answers">
-            <button class="ans-button">Answer 1</button>
-            <button class="ans-button">Answer 2</button>
-            <button class="ans-button">Answer 3</button>
-            <button class="ans-button">Answer 4</button>
+        <div id="container">
+            <h1>Quiz time</h1>
+            <p>Are you ready for the challenge?</p>
+            <!--button to go to instructions-->
+            <button id="start-btn" class="button">Start</button>
         </div>
-        <button id="nxt-button" class="hide">Next</button>
-    </div>
-    <div id ="result" class="hide">
-        <h3 id="finalscore">Display score here</h3>
-        <button id="replay-button" >Play Again</button>
-    </div>
+        <!--displays the division container-->
+        <div id="instructions" class="hide">
+            <h2>Instructions before you start</h2>
+            <p>You can choose your topic between HTML, CSS and JavaScript</p>
+            <p>There are 10 questions in each topic</p>
+            <p>Every correct answer will be rewarded with 1 point</p>
+            <!--two buttons to choose between start the game or exit-->
+            <button id="ready-btn" class="button">Ready</button>
+            <button id="exit-btn" class="button">Exit</button>
+        </div>
+        <!--a division to display the options to choose between 3 quiz type-->
+        <div id="options" class="hide">
+            <h2>Lets go for it..</h2>
+            <p>Choose your option below</p>
+            <button id="html-btn" class="button">HTML</button>
+            <button id="css-btn" class="button">CSS</button>
+            <button id="javascript-btn" class="button">JavaScript</button>
+        </div>
+        <!--division to display the question and answers-->
+        <div id="quiz" class="hide">
+            <h3 id="question">Display Question here:</h3>
+            <div id="answers">
+                <button class="ans-button">Answer 1</button>
+                <button class="ans-button">Answer 2</button>
+                <button class="ans-button">Answer 3</button>
+                <button class="ans-button">Answer 4</button>
+            </div>
+            <!--a next button to go to next question-->
+            <button id="nxt-button" class="hide">Next</button>
+        </div>
+        <!--division to display the score and play again button-->
+        <div id="result" class="hide">
+            <h3 id="finalscore">Display score here</h3>
+            <button id="replay-button">Play Again</button>
+        </div>
     </main>
     <!--link to javascript file-->
     <script src="assets/js/script.js"></script>
