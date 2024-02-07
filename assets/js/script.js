@@ -87,10 +87,10 @@ let htmlQuestions = [
     {
         question: "What is the correct HTML for making a checkbox?",
         answers: [
-            { text: '<checkbox>', correct: false },
-            { text: '<input type="checkbox">', correct: true },
-            { text: '<input type="check">', correct: false },
-            { text: '<check>', correct: false },
+            { text: '&lt;checkbox&gt;', correct: false },
+            { text: '&lt;input type="checkbox"&gt;', correct: true },
+            { text: '&lt;input type="check"&gt;', correct: false },
+            { text: '&lt;check&gt;', correct: false },
         ]
     },
     {
@@ -421,7 +421,7 @@ function displayQuiz(val) {
      * 'displayAnswers.appendChild' This appends the created button element to the displayAnswers element
      */
     // idea of this loop is inspired from Web Dev Simplified YouTube channel however it is fully customised
-    currentQuestion.answers.forEach(answer => {  
+    currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("ans-button");
@@ -435,7 +435,7 @@ function displayQuiz(val) {
 /**this function is to reset the answer fields
  * the while loop checks if the displayAnswers element has first child, if its true then the loop is executed
  * inside the loop the firstchild element of displayAnswers are removed and it is done until all the firstchild element is removed
- */ 
+ */
 function reset() {
     nextButton.classList.add('hide');// hiding the nextbutton from displaying    
     while (displayAnswers.firstChild) {
@@ -491,18 +491,17 @@ function displayScore() {
         { minScore: 1, maxScore: 3, message: `Your score is ${score} out of ${shuffledQuestions.length}! Goodluck for your next attempt.` },
         { minScore: 0, maxScore: 0, message: `Oops! sorry your score is ${score} out of ${shuffledQuestions.length}!.Better luck next time.` }
     ];
-    
+
     let message = '';
-    
+
     for (const range of scoreRanges) {
         if (score >= range.minScore && score <= range.maxScore) {
             message = range.message;
             break;
         }
     }
-    
+
     finalScore.innerHTML = message;
-    
     replayButton.addEventListener('click', playAgain);
 }
 
