@@ -1,4 +1,5 @@
-// assigning the button by its id
+try {
+    // assigning the button by its id
 const startButton = document.getElementById('start-btn');
 const readyButton = document.getElementById('ready-btn');
 const exitButton = document.getElementById('exit-btn');
@@ -523,4 +524,6 @@ function playAgain() {
     
 }
 
-
+} catch (error) {
+    console.error('An error occurred:', error);
+}
