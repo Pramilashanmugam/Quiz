@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /*styling for main page*/
 main {
     font-family: Arial, sans-serif;
@@ -19,11 +20,13 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 /* each division has been styled in similar background and font color to show uniformity*/
 #container,
 #instructions,
 #options,
-#quiz, #result{
+#quiz,
+#result {
     background-color: rgb(98, 0, 0);
     position: relative;
     width: 100%;
@@ -33,16 +36,19 @@ main {
     margin: auto;
     box-shadow: 0 0 10px 2px;
 }
+
 /* Heading elements*/
 h1,
-h2, #finalscore {
+h2 {
     padding: 10px;
     color: whitesmoke;
     margin: 10px;
 }
+
 /* paragraph element*/
-p {
-    color: #ff8000;
+p, #finalscore
+{
+color: #ff8000;
 }
 
 /* Each buttons are styled in similar pattern*/
@@ -56,14 +62,17 @@ p {
     color: black;
     border: none;
     border-radius: 10px;
-    cursor: pointer;/* on cursor pointing to each button the pointer style will be displayed*/
+    cursor: pointer;
+    /* on cursor pointing to each button the pointer style will be displayed*/
     box-shadow: 0 0 10px 2px;
 }
+
 /* when mouse is hovered you will see the diff font and background color*/
 .button:hover {
     background-color: #ff8000;
     color: whitesmoke;
 }
+
 /*division or button to hide*/
 .hide {
     display: none;
@@ -84,9 +93,10 @@ p {
     padding: 10px;
     margin: 5px;
     text-align: left;
-    cursor:pointer;
+    cursor: pointer;
     font-weight: 600;
 }
+
 /* hover effect will work only when the button is not disabled*/
 .ans-button:hover:not([disabled]) {
     background-color: #ff8000;
@@ -94,7 +104,8 @@ p {
 }
 
 /* next button and play again button*/
-#nxt-button, #replay-button {
+#nxt-button,
+#replay-button {
     padding: 10px 20px;
     margin: 15px;
     font-size: 16px;
@@ -107,21 +118,23 @@ p {
 }
 
 /*mouse hover effect on next and play again button*/
-#nxt-button:hover, #replay-button:hover {
+#nxt-button:hover,
+#replay-button:hover {
     background-color: #ff8000;
     color: whitesmoke;
 }
+
 /*when the selected answer is correct the button changes to green color*/
 .ans-button.correct {
     background-color: teal;
-    color:whitesmoke;
+    color: whitesmoke;
     font-weight: 600;
-    }
+}
 
 /*when the selected answer is correct the button changes to red color*/
 .ans-button.incorrect {
-    background-color:#F57575;
-    color:whitesmoke;
+    background-color: #F57575;
+    color: whitesmoke;
     font-weight: 600;
 }
 

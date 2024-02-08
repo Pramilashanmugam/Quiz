@@ -381,7 +381,7 @@ nextButton.addEventListener('click', nextButtonClickHandler);
 /** This function is responsible for initializing the quiz, based on the value received
  * for example if val = html, then the startquiz will performs only the html quiz
  * this one function, is used to perform all the three different quiz based on the value received
- * the sorting array idea is inspired from https://medium.com/ however it is customised
+ * the sorting array idea is inspired from https://medium.com/ but it is customised
  * quizState = val is to ensure only the corresponding quiz is displayed 
 */
 function startQuiz(val) {
@@ -459,7 +459,7 @@ function selectAnswer(e) {
     } else {
         selectedButton.classList.add("incorrect"); // if the selected button is false then class name incorrect will be added and the button will change to red colour
     }
-    Array.from(displayAnswers.children).forEach(function(button) { // for each button it will check whether the dataset is true
+    Array.from(displayAnswers.children).forEach(function(button) { // for each button it will check the condition whether the answer is true
         if (button.dataset.correct === "true") {
             button.classList.add("correct"); // if the condition is true it will add the class name correct 
         }
@@ -473,7 +473,7 @@ function selectAnswer(e) {
 }
 
 
-// function to display the score
+// function will display the total score gained by the user out of 10 points
 function displayScore() {
     reset();
     let swap = document.getElementById('quiz').style.display !== 'none';
@@ -513,13 +513,14 @@ function displayScore() {
     replayButton.addEventListener('click', playAgain);
 }
 
+// after the end of quiz once the score is displayed this function is called to play the quiz again
 function playAgain() {
     let swap = document.getElementById('result').style.display !== 'none';
     if (swap == true) {
         document.getElementById('result').style.display = 'none';
         document.getElementById('container').style.display = 'block';
     }
-    //startQuiz();
+    
 }
 
 
