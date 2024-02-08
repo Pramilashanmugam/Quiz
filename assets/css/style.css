@@ -46,9 +46,9 @@ h2 {
 }
 
 /* paragraph element*/
-p, #finalscore
-{
-color: #ff8000;
+p,
+#finalscore {
+    color: #ff8000;
 }
 
 /* Each buttons are styled in similar pattern*/
@@ -142,12 +142,15 @@ color: #ff8000;
 .notfound {
     text-align: center;
     justify-content: space-around;
+    background-image: none;
+    display: block;
 }
 
 .notfound>h1,
 .notfound>h2,
 .notfound>p {
     color: rgb(98, 0, 0);
+    margin-top: 10px;
 }
 
 .errormsg {
