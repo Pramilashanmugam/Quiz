@@ -366,17 +366,19 @@ let score = 0;
 let shuffledQuestions;
 let quizState;
 
-/** '=>' is called an arrow function to define functions in shortcut 
- * onclick of next button the arrow function is called
- * then currentquestionindex variable is incremented
+/** 
+ * onclick of next button, nextButtonClickHandler function is called
+ * this function increments the currentquestionindex on everytime nextbutton is clicked
  * then calls the displayquiz function 
- * */
-nextButton.addEventListener('click', () => {
+*/
+function nextButtonClickHandler() {
     currentQuestionIndex++;
     displayQuiz(quizState);
-});
+}
 
-/** This function is responsible for initializing the quiz based on the value received
+nextButton.addEventListener('click', nextButtonClickHandler);
+
+/** This function is responsible for initializing the quiz, based on the value received
  * for example if val = html, then the startquiz will performs only the html quiz
  * this one function, is used to perform all the three different quiz based on the value received
  * the sorting array idea is inspired from https://medium.com/ however it is customised
@@ -396,7 +398,11 @@ function startQuiz(val) {
     displayQuiz(val);
 }
 
-
+/**
+ * This function is responsible for displaying the current question of the quiz based on the topic specified by the val parameter
+ * the reset function will clear the previous display of question
+ * 'val' determines the topic of the quiz, based on the value received it displays the corresponding quiz topic
+ */
 function displayQuiz(val) {
     reset();
     let currentQuestion;
@@ -420,8 +426,7 @@ function displayQuiz(val) {
      * addEventListener is added on the button when clicked calls the selectAnswer function
      * 'displayAnswers.appendChild' This appends the created button element to the displayAnswers element
      */
-    // idea of this loop is inspired from Web Dev Simplified YouTube channel however it is fully customised
-    currentQuestion.answers.forEach(answer => {
+    currentQuestion.answers.forEach(function (answer) {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("ans-button");
@@ -431,6 +436,7 @@ function displayQuiz(val) {
         button.addEventListener('click', selectAnswer);
         displayAnswers.appendChild(button);
     });
+
 }
 /**this function is to reset the answer fields
  * the while loop checks if the displayAnswers element has first child, if its true then the loop is executed
@@ -443,20 +449,21 @@ function reset() {
     }
 }
 
+
 function selectAnswer(e) {
     const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct === "true"; // checking the selectedbuttons value with dataset
+    const correct = selectedButton.dataset.correct === "true"; // checking the selected button's value with dataset
     if (correct) {
-        selectedButton.classList.add("correct");            // if the selected button is true then class name correct will be added and the button will change to green colour
+        selectedButton.classList.add("correct"); // if the selected button is true then class name correct will be added and the button will change to green colour
         score++;
     } else {
-        selectedButton.classList.add("incorrect");          // if the selected button is false then class name incorrect will be added and the button will change to red colour
+        selectedButton.classList.add("incorrect"); // if the selected button is false then class name incorrect will be added and the button will change to red colour
     }
-    Array.from(displayAnswers.children).forEach(button => {    // for each button it will whether the dataset is true
+    Array.from(displayAnswers.children).forEach(function(button) { // for each button it will check whether the dataset is true
         if (button.dataset.correct === "true") {
-            button.classList.add("correct");                // if the condition is true it will add the class name correct 
+            button.classList.add("correct"); // if the condition is true it will add the class name correct 
         }
-        button.disabled = true;                             // disabling the multiple time click once the answer is selected
+        button.disabled = true; // disabling the multiple-time click once the answer is selected
     });
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
@@ -464,6 +471,7 @@ function selectAnswer(e) {
         displayScore();
     }
 }
+
 
 // function to display the score
 function displayScore() {
