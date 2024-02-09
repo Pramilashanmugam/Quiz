@@ -14,10 +14,16 @@ const displayQuestion = document.getElementById('question');
 const displayAnswers = document.getElementById('answers');
 const finalScore = document.getElementById('finalscore');
 
-// onclick goes to the respective function
-htmlButton.addEventListener('click', htmlQuizQuestions);
-cssButton.addEventListener('click', cssQuizQuestions);
-jsButton.addEventListener('click', javascriptQuizQuestions);
+// onclick on respective button it goes to the respective function
+htmlButton.addEventListener('click', function() {      // Call this function when HTML button is clicked
+    quizQuestions("html");
+});
+cssButton.addEventListener('click', function() {       // Call this function when CSS button is clicked
+    quizQuestions("css");
+});
+jsButton.addEventListener('click', function() {        // Call this function when JavaScript button is clicked
+    quizQuestions("javascript");
+});
 startButton.addEventListener('click', goToInstructions); // on Click of Start button displays instruction for the quiz
 readyButton.addEventListener('click', jumpToOptions); // Goes to the quiz option section when the Ready button is clicked
 exitButton.addEventListener('click', goToInstructions); // on click of exit button it returns to home section
@@ -54,46 +60,22 @@ function jumpToOptions() {
     }
 }
 
-// this function is called to perform html quiz, when the html button is clicked on the option section
-function htmlQuizQuestions() {
+/** this function is called to land on the respective quiz container. 
+ * for example when the html button is clicked on the option section, it will take you to html quiz
+ * on click of the button the quiztype parameter takes the value to startquiz function
+ * */ 
+
+function quizQuestions(quizType) {
     try {
         let swap = document.getElementById('options').style.display !== 'none';
         if (swap == true) {
             document.getElementById('options').style.display = 'none';
             document.getElementById('quiz').style.display = 'block';
-            startQuiz("html");
+            startQuiz(quizType);
         }
     } catch (error) {
         console.error('An error occurred:', error);
     }
-}
-
-// this function is called to perform Css quiz, when the Css button is clicked on the option section
-function cssQuizQuestions() {
-    try {
-        let swap = document.getElementById('options').style.display !== 'none';
-        if (swap == true) {
-            document.getElementById('options').style.display = 'none';
-            document.getElementById('quiz').style.display = 'block';
-            startQuiz("css");
-        }
-    } catch (error) {
-        console.error('An error occurred:', error);
-    }
-}
-
-// this function is called to perform javascript quiz, when the Javascript button is clicked on the option section
-function javascriptQuizQuestions() {
-    try {
-        let swap = document.getElementById('options').style.display !== 'none';
-        if (swap == true) {
-            document.getElementById('options').style.display = 'none';
-            document.getElementById('quiz').style.display = 'block';
-        } startQuiz('javascript');
-    } catch (error) {
-        console.error('An error occurred:', error);
-    }
-
 }
 
 // Variables assigned
@@ -221,7 +203,7 @@ function selectAnswer(e) {
 }
 
 
-// function will display the total score gained by the user out of 10 points
+// function will display the total score scored by the user
 function displayScore() {
     try {
     reset();
