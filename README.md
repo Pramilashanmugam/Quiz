@@ -7,7 +7,7 @@ A simple and easy to navigate quiz website for any ages.
 
 This website is responsive on all the screens, from Mobile to desktop.
 
-![Screenshot 2024-02-08 9 47 39 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/90286393-b881-4101-b725-5ee05ac2644a)
+ ![Screenshot 2024-02-09 8 45 15 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/e27b6e26-2aba-4f38-9568-e8ff20f64750)
 
 # Features
 
@@ -35,38 +35,39 @@ My main objective to create this quiz is, not only to check the users knowledge 
 
   * A site wide favicon has been implemented, showing the quiz logo.
 
-    ![Screenshot 2024-02-08 10 02 20 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/b30d9a4a-9c1d-44ce-8a4b-9e5d8627c968)
+      ![Screenshot 2024-02-08 10 02 20 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/b30d9a4a-9c1d-44ce-8a4b-9e5d8627c968)
 
 * ### Landing page
   * The landing page has a tech related background to match the Theme of quiz.
   * And you have a display asking the user to click start button to begin the quiz.
 
-![Screenshot 2024-02-08 10 11 04 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/c11acf8d-506c-44cd-a840-a3aa08ded041)
+     ![Screenshot 2024-02-09 8 46 35 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/6e03a48c-f284-44f6-a32f-4bd7cd593c71)
 
 * ### Instructions
 
   * Once the start button is clicked you will navigate to the instruction screen, you will have option to click Ready or Exit. If ready button is clicked it will take you to the next division and if Exit button is clicked it will take you back to Landing page.
 
-![Screenshot 2024-02-08 10 12 37 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/17703f96-3eca-4d3a-8e85-e9ee243aa6c7)
+     ![Screenshot 2024-02-09 8 47 17 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/e664f766-fe02-476f-b46d-d09aa0949fec)
 
 * ### Option to Choose
 
   * This page will display the options to choose a quiz between 3 options. On clicking to the respective buttons you will be directed to the quiz screen.
  
-![Screenshot 2024-02-08 10 13 59 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/de1740fb-bf11-4972-96b4-3f278af076a5)
+     ![Screenshot 2024-02-09 8 48 04 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/8daf1709-59c1-474e-ba89-c82c5ce12846)
 
 * ### Question and Answer options displayed
 
   * On choosing the respective Quiz you will land to the questions related to the topic. Each question will have question number, 4 answer options, when the cursor is pointed on the answer you will have hover effect.
 
 
-![Screenshot 2024-02-08 10 31 26 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/a24969ec-359a-445b-bbc6-c24d9cad694b)
+
+     ![Screenshot 2024-02-09 8 50 20 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/92868acc-a8b8-4ac5-be63-09970a41f51b)
 
 * ### Correct Answer
 
   * If the answer is correct the button will change to green colour and also the next button will appear to go to next question.
 
-![Screenshot 2024-02-08 10 34 05 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/0467e910-b54c-4caf-ba05-83c4a042f77d)
+     ![Screenshot 2024-02-09 8 50 51 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/826eb465-2a70-49a4-8368-735217f2a9fa)
 
 
 * ### Wrong Answer
@@ -74,54 +75,135 @@ My main objective to create this quiz is, not only to check the users knowledge 
 
   * If the chosen answer was incorrect, the selected button will change to red and simultaneously it will display the correct answer in green color.
 
-  ![Screenshot 2024-02-08 10 35 57 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/b71f9db9-ced1-49f8-8f08-f566f7508234)
+     ![Screenshot 2024-02-09 8 51 24 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/3971deef-c529-4ba7-90a5-deab4556f79d)
 
 * ### Score displayed
 
   * At the end of 10th question, your score will be displayed with corresponding comments.
 
-  ![Screenshot 2024-02-08 10 40 45 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/cb50eb79-9bca-4d6c-9125-971840c240ec)
+     ![Screenshot 2024-02-09 8 54 07 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/b7a1b52f-f277-4df5-a318-c9a337c5b7d5)
 
   * The comment varies according the Score range, if its out of out the above comment will be displayed.
 
   * If the score is between 7 - 9 the below comment will be displayed.
 
-  ![Screenshot 2024-02-08 10 43 59 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/1fb98665-f013-4512-b4fa-f0af15b814ec)
+      ![Screenshot 2024-02-09 8 52 53 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/5048b443-efce-4af5-b7d9-885f11867825)
+
 
   * Likewise there are totally five different comments (range 10, 7-9, 4-6, 1-3 and 0)according to the range of scores.
 
   * Score between 4 to 6 will have this message displayed.
 
-  ![Screenshot 2024-02-08 10 48 13 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/105a94f2-2231-42d6-b1f6-a38fa3140736)
+     ![Screenshot 2024-02-09 8 55 29 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/44e3b04b-3e85-40fc-a4c3-2d39a36c0873)
 
   * Score between 1 to 3 will have this message displayed.
 
-  ![Screenshot 2024-02-08 10 49 22 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/c327716e-bb09-4b32-8cdc-0796cfad27d6)
+     ![Screenshot 2024-02-09 8 56 47 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/4c0c86a4-1787-4b36-b97a-074f56b0c54d)
 
   * If Score is Zero, this message will be displayed.
 
-  ![Screenshot 2024-02-08 10 52 25 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/b6c04ea6-0680-46bd-b34d-e3558b94d109)
+     ![Screenshot 2024-02-09 9 00 30 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/7d94c8d3-75d9-4742-961c-917a4cd05ec7)
 
 
 * ### PlayAgain option
 
   * On Clicking on Play Again button, it will redirect you to the landing page.
 
+     ![Screenshot 2024-02-09 9 01 33 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/9eabf934-aba7-4416-a392-ed6f1dbbc71b)
+
 * ### 404 Page
 
   * A customised 404 page has been implemented and it will be displayed when a user navigates to a broken link.
   * The 404 page will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need of the browsers back button.
 
-  ![Screenshot 2024-02-08 11 01 32 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/d8d80d19-a848-469c-a06a-a3c721a00aac)
+![Screenshot 2024-02-09 9 03 19 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/fc856ab2-7cc9-4cf4-bdc4-1bd0ea1f7422)
 
 ## Features Planned to Implement in Future
 
-* Input of the user name and to display the highest scorer.
-* To fix timer for each questions, which would be more interesting.
+* To create an input element for user name's and then to display the highest scorer of the quiz.
+* To fix timer for each questions.
 
 ## Design
 
 ### Wireframes
+
+# Testing
+
+## Responsiveness
+
+All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in [WCAG 2.1 Reflow criteria for responsive design](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) on Chrome, Edge, Firefox and Opera browsers.
+
+* Steps to test:
+ * Open browser and navigate to [Quiz to check your knowledge](https://pramilashanmugam.github.io/Quiz/)
+  * Open the developer tools (right click and inspect)
+  * Set to responsive and decrease width to 320px.
+  * Set the zoom to 50%.
+  * Click and drag the responsive window to maximum width.
+
+Expected:
+
+Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
+
+Actual:
+
+Website behaved as expected.
+
+#### Cross-Browser Testing:
+
+Website was also opened on the following browsers with no issues
+
+ * Safari
+ * Mozilla firefox
+ * Chrome
+ * Edge
+
+Website was also opened on the following devices and no responsive issues were seen:
+
+* Galaxy fold
+* ipad Air
+* iPhone SE
+* Samsung s8+
+* Surface Pro 7
+
+## Functional Testing
+
+#### Buttons Testing:
+
+* Each buttons in this website are tested to check whether it does its functionality as per design and the outcome was same as expected as per the functionality.
+
+   * Start button
+
+     * Testing was performed to check on clicking the start button does it navigates to the next division, as per design it navigated correctly to next division which is Instruction.
+
+  * Ready button
+
+    * Testing was performed to check whether on click of Ready button does it navigates to the next division, as per design it navigates correctly to next division which is Option to choose the quiz. 
+
+  * Exit button
+
+    * Checked whether on click of exit button does it return to the landing Quiz page. It has navigated correctly to the landing page as per the design.
+
+  * HTML Button
+
+    * Testing performed to check whether on clicking HTML button does it navigate the correct set of Questions assigned for HTML quiz. It worked correctly as per design and navigated to the right set of HTML question and answers.
+
+  * CSS Button
+
+    * Testing performed to check whether on clicking CSS button does it navigate the correct set of Questions assigned for CSS quiz. It worked correctly as per design and navigated to the right set of CSS question and answers.
+
+  * JavaScript Button
+
+    * Testing performed to check whether on clicking JavaScript button does it navigate to the correct set of Questions assigned for JavaScript quiz. It worked correctly as per design and navigated to the right set of JavaScript question and answers.
+  
+  * Next Button
+
+    * As per design this button should appear only after the answer button is clicked and should stop displaying once the last question of the array is displayed. When tested its performance it function correctly as per the Design.
+  
+  * Play Again Button
+
+    * As per design this button will appear in the last division with the Score and on click of this button should return to the landing page. On testing it performed correctly as per the requirement.
+  
+  
 
 
 
