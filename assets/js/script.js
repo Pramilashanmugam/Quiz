@@ -15,18 +15,19 @@ const displayAnswers = document.getElementById('answers');
 const finalScore = document.getElementById('finalscore');
 
 // onclick on respective button it goes to the respective function
-htmlButton.addEventListener('click', function() {      // Call this function when HTML button is clicked
+htmlButton.addEventListener('click', function () {      // Call this function when HTML button is clicked
     quizQuestions("html");
 });
-cssButton.addEventListener('click', function() {       // Call this function when CSS button is clicked
+cssButton.addEventListener('click', function () {       // Call this function when CSS button is clicked
     quizQuestions("css");
 });
-jsButton.addEventListener('click', function() {        // Call this function when JavaScript button is clicked
+jsButton.addEventListener('click', function () {        // Call this function when JavaScript button is clicked
     quizQuestions("javascript");
 });
 startButton.addEventListener('click', goToInstructions); // on Click of Start button displays instruction for the quiz
 readyButton.addEventListener('click', jumpToOptions); // Goes to the quiz option section when the Ready button is clicked
 exitButton.addEventListener('click', goToInstructions); // on click of exit button it returns to home section
+nextButton.addEventListener('click', nextButtonClickHandler); // on click of next button, navigates to next question
 
 // this function is to travel from home section to instruction section and also to return from instruction to home
 function goToInstructions() {
@@ -40,7 +41,7 @@ function goToInstructions() {
             document.getElementById('instructions').style.display = 'none';
         }
     } catch (error) {
-        console.error('An error occurred:', error);
+        console.error('An error occurred in goToInstruction:', error);
     }
 }
 
@@ -56,14 +57,14 @@ function jumpToOptions() {
             document.getElementById('options').style.display = 'block';
         }
     } catch (error) {
-        console.error('An error occurred:', error);
+        console.error('An error occurred jumpToOptions:', error);
     }
 }
 
 /** this function is called to land on the respective quiz container. 
  * for example when the html button is clicked on the option section, it will take you to html quiz
  * on click of the button the quiztype parameter takes the value to startquiz function
- * */ 
+ * */
 
 function quizQuestions(quizType) {
     try {
@@ -74,11 +75,11 @@ function quizQuestions(quizType) {
             startQuiz(quizType);
         }
     } catch (error) {
-        console.error('An error occurred:', error);
+        console.error('An error occurred quizQuestions:', error);
     }
 }
 
-// Variables assigned
+// Variables declared
 let currentQuestionIndex;
 let score = 0;
 let shuffledQuestions;
@@ -94,8 +95,6 @@ function nextButtonClickHandler() {
     displayQuiz(quizState);
 }
 
-nextButton.addEventListener('click', nextButtonClickHandler);
-
 /** This function is responsible for initializing the quiz, based on the value received
  * for example if val = html, then the startquiz will performs only the html quiz
  * this one function, is used to perform all the three different quiz based on the value received
@@ -108,15 +107,15 @@ function startQuiz(val) {
         currentQuestionIndex = 0;
         if (val == "html") {
             shuffledQuestions = htmlQuestions.sort(() => Math.random() - 0.5); // shuffles the questions randomly, 
-        } else if (val == 'css') {
+        } else if (val == "css") {
             shuffledQuestions = cssQuestions.sort(() => Math.random() - 0.5);
-        } else if (val == 'javascript') {
+        } else if (val == "javascript") {
             shuffledQuestions = jsQuestions.sort(() => Math.random() - 0.5);
         }
         score = 0;
         displayQuiz(val);
     } catch (error) {
-        console.error('An error occurred:', error);
+        console.error('An error occurred in startQuiz:', error);
     }
 }
 
@@ -136,7 +135,6 @@ function displayQuiz(val) {
         } else if (val == 'javascript') {
             currentQuestion = jsQuestions[currentQuestionIndex];
         }
-
         let questionNum = currentQuestionIndex + 1;
         displayQuestion.innerHTML = questionNum + '. ' + currentQuestion.question; // displaying the currentquestion with the  question no
 
@@ -160,9 +158,8 @@ function displayQuiz(val) {
             displayAnswers.appendChild(button);
         });
     } catch (error) {
-        console.error('An error occurred:', error);
+        console.error('An error occurred in displayQuiz:', error);
     }
-
 }
 /**this function is to reset the answer fields
  * the while loop checks if the displayAnswers element has first child, if its true then the loop is executed
@@ -174,7 +171,6 @@ function reset() {
         displayAnswers.removeChild(displayAnswers.firstChild);
     }
 }
-
 
 function selectAnswer(e) {
     try {
@@ -198,43 +194,38 @@ function selectAnswer(e) {
             displayScore();
         }
     } catch (error) {
-        console.error('An error occurred:', error);
+        console.error('An error occurred selectAnswer:', error);
     }
 }
-
 
 // function will display the total score scored by the user
 function displayScore() {
     try {
-    reset();
-    let swap = document.getElementById('quiz').style.display !== 'none';
-    if (swap == true) {
-        document.getElementById('quiz').style.display = 'none';
-        document.getElementById('result').style.display = 'block';
-    }
-    const scoreRanges = [
-        { minScore: 10, maxScore: 10, message: `Awesome! You nailed it! Your score is ${score} out of ${shuffledQuestions.length}!` },
-        { minScore: 7, maxScore: 9, message: `Congratulations! you have scored ${score} out of ${shuffledQuestions.length}! Your knowledge about this topic is almost close to 100%, Try again` },
-        { minScore: 4, maxScore: 6, message: `Your Score is ${score} out of ${shuffledQuestions.length}! Give a try again to score more.` },
-        { minScore: 1, maxScore: 3, message: `Your score is ${score} out of ${shuffledQuestions.length}! Goodluck for your next attempt.` },
-        { minScore: 0, maxScore: 0, message: `Oops! sorry your score is ${score} out of ${shuffledQuestions.length}!.Better luck next time.` }
-    ];
-
-    let message = '';
-
-    for (const range of scoreRanges) {
-        if (score >= range.minScore && score <= range.maxScore) {
-            message = range.message;
-            break;
+        reset();
+        let swap = document.getElementById('quiz').style.display !== 'none';
+        if (swap == true) {
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
         }
+        const scoreRanges = [
+            { minScore: 10, maxScore: 10, message: `Awesome! You nailed it! Your score is ${score} out of ${shuffledQuestions.length}!` },
+            { minScore: 7, maxScore: 9, message: `Congratulations! you have scored ${score} out of ${shuffledQuestions.length}! Your knowledge about this topic is almost close to 100%, Try again` },
+            { minScore: 4, maxScore: 6, message: `Your Score is ${score} out of ${shuffledQuestions.length}! Give a try again to score more.` },
+            { minScore: 1, maxScore: 3, message: `Your score is ${score} out of ${shuffledQuestions.length}! Goodluck for your next attempt.` },
+            { minScore: 0, maxScore: 0, message: `Oops! sorry your score is ${score} out of ${shuffledQuestions.length}!.Better luck next time.` }
+        ];
+        let message = '';
+        for (const range of scoreRanges) {
+            if (score >= range.minScore && score <= range.maxScore) {
+                message = range.message;
+                break;
+            }
+        }
+        finalScore.innerHTML = message;
+        replayButton.addEventListener('click', playAgain);
+    } catch (error) {
+        console.error('An error occurred displayScore:', error);
     }
-
-    finalScore.innerHTML = message;
-    replayButton.addEventListener('click', playAgain);
-} catch (error) {
-    console.error('An error occurred:', error);
-}
-
 }
 
 // after the end of quiz once the score is displayed this function is called to play the quiz again
@@ -244,5 +235,4 @@ function playAgain() {
         document.getElementById('result').style.display = 'none';
         document.getElementById('container').style.display = 'block';
     }
-
 }
