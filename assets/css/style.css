@@ -7,19 +7,32 @@
     box-sizing: border-box;
 }
 
-/*styling for main page*/
-main {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../images/quizbackground.png');
+/**/
+
+#bkimage {
+    min-width: 100%;
+    min-height:100vh;
+    background-image: url('/assets/images/quizbackground.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position:absolute;
+    z-index: index 99;
+    background-color: rgba(255, 219, 198, 0.7);
+    
 }
+/*styling for section page*/
+#box {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    width:100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 
 /* each division has been styled in similar background and font color to show uniformity*/
 #container,
