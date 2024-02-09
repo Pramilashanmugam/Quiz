@@ -1,5 +1,4 @@
-try {
-    // assigning the button by its id
+// assigning the button by its id
 const startButton = document.getElementById('start-btn');
 const readyButton = document.getElementById('ready-btn');
 const exitButton = document.getElementById('exit-btn');
@@ -17,8 +16,8 @@ htmlButton.addEventListener('click', htmlQuizQuestions);
 cssButton.addEventListener('click', cssQuizQuestions);
 jsButton.addEventListener('click', javascriptQuizQuestions);
 startButton.addEventListener('click', goToInstructions); // on Click of Start button displays instruction for the quiz
-readyButton.addEventListener('click', jumpToOptions); // Goes to the quiz option division when the Ready button is clicked
-exitButton.addEventListener('click', goToInstructions); // on click of exit button it returns to home division
+readyButton.addEventListener('click', jumpToOptions); // Goes to the quiz option section when the Ready button is clicked
+exitButton.addEventListener('click', goToInstructions); // on click of exit button it returns to home section
 
 // question and answer array for html quiz
 let htmlQuestions = [
@@ -306,58 +305,77 @@ let jsQuestions = [
 ];
 // end of javascript quiz questions
 
-// this function is to travel from home division to instruction division and also to return from instruction to home
+// this function is to travel from home section to instruction section and also to return from instruction to home
 function goToInstructions() {
-
-    let swap = document.getElementById('container').style.display !== 'none';
-    if (swap == true) {
-        document.getElementById('container').style.display = 'none';
-        document.getElementById('instructions').style.display = 'block';
-    } else {
-        document.getElementById('container').style.display = 'block';
-        document.getElementById('instructions').style.display = 'none';
+    try {
+        let swap = document.getElementById('container').style.display !== 'none';
+        if (swap == true) {
+            document.getElementById('container').style.display = 'none';
+            document.getElementById('instructions').style.display = 'block';
+        } else {
+            document.getElementById('container').style.display = 'block';
+            document.getElementById('instructions').style.display = 'none';
+        }
+    } catch (error) {
+        console.error('An error occurred:', error);
     }
 }
 
 /**
- * this function is to travel from instruction division to the option division 
+ * this function is to travel from instruction section to the option section 
  * where you can choose the quiz options between 3 quizzes
  */
 function jumpToOptions() {
-    let swap = document.getElementById('instructions').style.display !== 'none';
-    if (swap == true) {
-        document.getElementById('instructions').style.display = 'none';
-        document.getElementById('options').style.display = 'block';
+    try {
+        let swap = document.getElementById('instructions').style.display !== 'none';
+        if (swap == true) {
+            document.getElementById('instructions').style.display = 'none';
+            document.getElementById('options').style.display = 'block';
+        }
+    } catch (error) {
+        console.error('An error occurred:', error);
     }
 }
 
-// this function is called to perform html quiz, when the html button is clicked on the option division
+// this function is called to perform html quiz, when the html button is clicked on the option section
 function htmlQuizQuestions() {
-    let swap = document.getElementById('options').style.display !== 'none';
-    if (swap == true) {
-        document.getElementById('options').style.display = 'none';
-        document.getElementById('quiz').style.display = 'block';
-        startQuiz("html");
+    try {
+        let swap = document.getElementById('options').style.display !== 'none';
+        if (swap == true) {
+            document.getElementById('options').style.display = 'none';
+            document.getElementById('quiz').style.display = 'block';
+            startQuiz("html");
+        }
+    } catch (error) {
+        console.error('An error occurred:', error);
     }
 }
 
-// this function is called to perform Css quiz, when the Css button is clicked on the option division
+// this function is called to perform Css quiz, when the Css button is clicked on the option section
 function cssQuizQuestions() {
-    let swap = document.getElementById('options').style.display !== 'none';
-    if (swap == true) {
-        document.getElementById('options').style.display = 'none';
-        document.getElementById('quiz').style.display = 'block';
-        startQuiz("css");
+    try {
+        let swap = document.getElementById('options').style.display !== 'none';
+        if (swap == true) {
+            document.getElementById('options').style.display = 'none';
+            document.getElementById('quiz').style.display = 'block';
+            startQuiz("css");
+        }
+    } catch (error) {
+        console.error('An error occurred:', error);
     }
 }
 
-// this function is called to perform javascript quiz, when the Javascript button is clicked on the option division
+// this function is called to perform javascript quiz, when the Javascript button is clicked on the option section
 function javascriptQuizQuestions() {
-    let swap = document.getElementById('options').style.display !== 'none';
-    if (swap == true) {
-        document.getElementById('options').style.display = 'none';
-        document.getElementById('quiz').style.display = 'block';
-    } startQuiz('javascript');
+    try {
+        let swap = document.getElementById('options').style.display !== 'none';
+        if (swap == true) {
+            document.getElementById('options').style.display = 'none';
+            document.getElementById('quiz').style.display = 'block';
+        } startQuiz('javascript');
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
 
 }
 
@@ -386,17 +404,21 @@ nextButton.addEventListener('click', nextButtonClickHandler);
  * quizState = val is to ensure only the corresponding quiz is displayed 
 */
 function startQuiz(val) {
-    quizState = val;
-    currentQuestionIndex = 0;
-    if (val == "html") {
-        shuffledQuestions = htmlQuestions.sort(() => Math.random() - 0.5); // shuffles the questions randomly, 
-    } else if (val == 'css') {
-        shuffledQuestions = cssQuestions.sort(() => Math.random() - 0.5);
-    } else if (val == 'javascript') {
-        shuffledQuestions = jsQuestions.sort(() => Math.random() - 0.5);
+    try {
+        quizState = val;
+        currentQuestionIndex = 0;
+        if (val == "html") {
+            shuffledQuestions = htmlQuestions.sort(() => Math.random() - 0.5); // shuffles the questions randomly, 
+        } else if (val == 'css') {
+            shuffledQuestions = cssQuestions.sort(() => Math.random() - 0.5);
+        } else if (val == 'javascript') {
+            shuffledQuestions = jsQuestions.sort(() => Math.random() - 0.5);
+        }
+        score = 0;
+        displayQuiz(val);
+    } catch (error) {
+        console.error('An error occurred:', error);
     }
-    score = 0;
-    displayQuiz(val);
 }
 
 /**
@@ -405,38 +427,42 @@ function startQuiz(val) {
  * 'val' determines the topic of the quiz, based on the value received it displays the corresponding quiz topic
  */
 function displayQuiz(val) {
-    reset();
-    let currentQuestion;
-    if (val == 'html') {
-        currentQuestion = htmlQuestions[currentQuestionIndex];
-    } else if (val == 'css') {
-        currentQuestion = cssQuestions[currentQuestionIndex];
-    } else if (val == 'javascript') {
-        currentQuestion = jsQuestions[currentQuestionIndex];
-    }
-
-    let questionNum = currentQuestionIndex + 1;
-    displayQuestion.innerHTML = questionNum + '. ' + currentQuestion.question; // displaying the currentquestion with the  question no
-
-    /**
-     * The for loop iterates over each answer option in the 'answers'
-     * 'const button' creates a new button element for each answer option
-     * 'button.innerHTML' sets the content of the button to the text of current answer option
-     * 'button.classList.add' adds the css class to these buttons
-     * if condition checks for the answer is true, when the ans is correct it adds the correct attribute
-     * addEventListener is added on the button when clicked calls the selectAnswer function
-     * 'displayAnswers.appendChild' This appends the created button element to the displayAnswers element
-     */
-    currentQuestion.answers.forEach(function (answer) {
-        const button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.classList.add("ans-button");
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
+    try {
+        reset();
+        let currentQuestion;
+        if (val == 'html') {
+            currentQuestion = htmlQuestions[currentQuestionIndex];
+        } else if (val == 'css') {
+            currentQuestion = cssQuestions[currentQuestionIndex];
+        } else if (val == 'javascript') {
+            currentQuestion = jsQuestions[currentQuestionIndex];
         }
-        button.addEventListener('click', selectAnswer);
-        displayAnswers.appendChild(button);
-    });
+
+        let questionNum = currentQuestionIndex + 1;
+        displayQuestion.innerHTML = questionNum + '. ' + currentQuestion.question; // displaying the currentquestion with the  question no
+
+        /**
+         * The for loop iterates over each answer option in the 'answers'
+         * 'const button' creates a new button element for each answer option
+         * 'button.innerHTML' sets the content of the button to the text of current answer option
+         * 'button.classList.add' adds the css class to these buttons
+         * if condition checks for the answer is true, when the ans is correct it adds the correct attribute
+         * addEventListener is added on the button when clicked calls the selectAnswer function
+         * 'displayAnswers.appendChild' This appends the created button element to the displayAnswers element
+         */
+        currentQuestion.answers.forEach(function (answer) {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("ans-button");
+            if (answer.correct) {
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener('click', selectAnswer);
+            displayAnswers.appendChild(button);
+        });
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
 
 }
 /**this function is to reset the answer fields
@@ -452,47 +478,41 @@ function reset() {
 
 
 function selectAnswer(e) {
-    const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct === "true"; // checking the selected button's value with dataset
-    if (correct) {
-        selectedButton.classList.add("correct"); // if the selected button is true then class name correct will be added and the button will change to green colour
-        score++;
-    } else {
-        selectedButton.classList.add("incorrect"); // if the selected button is false then class name incorrect will be added and the button will change to red colour
-    }
-    Array.from(displayAnswers.children).forEach(function(button) { // for each button it will check the condition whether the answer is true
-        if (button.dataset.correct === "true") {
-            button.classList.add("correct"); // if the condition is true it will add the class name correct 
+    try {
+        const selectedButton = e.target;
+        const correct = selectedButton.dataset.correct === "true"; // checking the selected button's value with dataset
+        if (correct) {
+            selectedButton.classList.add("correct"); // if the selected button is true then class name correct will be added and the button will change to green colour
+            score++;
+        } else {
+            selectedButton.classList.add("incorrect"); // if the selected button is false then class name incorrect will be added and the button will change to red colour
         }
-        button.disabled = true; // disabling the multiple-time click once the answer is selected
-    });
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide');
-    } else {
-        displayScore();
+        Array.from(displayAnswers.children).forEach(function (button) { // for each button it will check the condition whether the answer is true
+            if (button.dataset.correct === "true") {
+                button.classList.add("correct"); // if the condition is true it will add the class name correct 
+            }
+            button.disabled = true; // disabling the multiple-time click once the answer is selected
+        });
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+            nextButton.classList.remove('hide');
+        } else {
+            displayScore();
+        }
+    } catch (error) {
+        console.error('An error occurred:', error);
     }
 }
 
 
 // function will display the total score gained by the user out of 10 points
 function displayScore() {
+    try {
     reset();
     let swap = document.getElementById('quiz').style.display !== 'none';
     if (swap == true) {
         document.getElementById('quiz').style.display = 'none';
         document.getElementById('result').style.display = 'block';
     }
-    /*if (score === 10) {
-        finalScore.innerHTML = `Awesome! You nailed it! Your score is ${score} out of ${shuffledQuestions.length}!`;
-    } else if (score === 7 || score === 8 || score === 9) {
-        finalScore.innerHTML = `Congratulations! you have scored ${score} out of ${shuffledQuestions.length}! Your knowledge about this topic is little close to 100%, Try again`;
-    } else if (score === 4 || score === 5 || score === 6) {
-        finalScore.innerHTML = `Your Score is ${score} out of ${shuffledQuestions.length}! Give a try again to score more.`;
-    } else if (score === 3 || score === 2 || score === 1) {
-        finalScore.innerHTML = `Your score is ${score} out of ${shuffledQuestions.length}! Goodluck for your next attempt.`;
-    } else if (score === 0) {
-        finalScore.innerHTML = `Oops! sorry your score is ${score} out of ${shuffledQuestions.length}!.Better luck next time.`;
-    }*/
     const scoreRanges = [
         { minScore: 10, maxScore: 10, message: `Awesome! You nailed it! Your score is ${score} out of ${shuffledQuestions.length}!` },
         { minScore: 7, maxScore: 9, message: `Congratulations! you have scored ${score} out of ${shuffledQuestions.length}! Your knowledge about this topic is almost close to 100%, Try again` },
@@ -512,6 +532,10 @@ function displayScore() {
 
     finalScore.innerHTML = message;
     replayButton.addEventListener('click', playAgain);
+} catch (error) {
+    console.error('An error occurred:', error);
+}
+
 }
 
 // after the end of quiz once the score is displayed this function is called to play the quiz again
@@ -521,9 +545,5 @@ function playAgain() {
         document.getElementById('result').style.display = 'none';
         document.getElementById('container').style.display = 'block';
     }
-    
-}
 
-} catch (error) {
-    console.error('An error occurred:', error);
 }
