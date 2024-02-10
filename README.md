@@ -1,9 +1,9 @@
 # A Quiz about HTML CSS JAVASCRIPT 
-## Welcome to my [Quiz](https://pramilashanmugam.github.io/Quiz/)
+## Welcome to my [Quiz to check your knowledge](https://pramilashanmugam.github.io/Quiz/)
 
-I have created this website for people who wants to check their basic knowledge on HTML, CSS and JavaScript language. 
+The main purpose of developing this Quiz website is to help the user to check their knowledge on HTML, CSS and JavaScript Language and also educate them with correct answer incase if their answer was wrong. 
 
-A simple and easy to navigate quiz website for any ages.
+This website is very userfriendly and easy to navigate with no complexcity.
 
 This website is responsive on all the screens, from Mobile to desktop.
 
@@ -310,15 +310,75 @@ Website was also opened on the following devices and no responsive issues were s
   ![Screenshot 2024-02-10 11 30 08 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/7685ab96-473a-4c7c-b9a9-89ff552a46c2)
 
 
-# 
+## PageSpeedInsight Result
+
+### On Mobile
+
+  ![Screenshot 2024-02-10 11 35 59 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/b89d47e7-ea8a-4ce2-bfce-bf805c8b6de7)
 
   
+### On Desktop
+
+  ![Screenshot 2024-02-10 11 36 31 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/bc0b95e4-aca2-4a0a-a659-9e022f1ac3ff)
 
 
+## Deployment
+
+### Version Control
+
+* The site is created using the Gitpod IDE and then added and commited to git. Later pushed to github.
+* The following git commands were used throughout development to push code to the remote repo:
+  * git add <file>/.- This command was used to add the file(s) to the staging area before they are committed.
+  * git commit -m “commit message” - This command was used to commit changes to the local repository queue ready for the final step.
+  * git push - This command was used to push all committed code to the remote repository on github.
+
+### Deployment to Github Pages
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+* In the GitHub repository, navigate to the Settings tab
+* From the menu on left select 'Pages'
+* From the source section drop-down menu, select the Branch: main
+* Click 'Save'
+* A live link will be displayed in a green banner when published successfully.
+
+  The live link can be found here - https://pramilashanmugam.github.io/Quiz/
 
 
+### Clone the Repository Code Locally
+
+Navigate to the GitHub Repository you want to clone to use locally:
+*  Click on the code drop down button
+*  Click on HTTPS
+*  Copy the repository link to the clipboard
+*  Open your IDE of choice (git must be installed for the next steps)
+*  Type git clone copied-git-url into the IDE terminal
+The project will now of been cloned on your local machine for use.
 
 
+## Credits
+
+* I would like to take this opportunity to thank many sources and people who are directly or indirectly being an reason on completion of my project.
+
+  * my mentors Rory Patrick for being very supportive and helpful.  
+  * Slack community 
+  * I would like to thank some Youtube channels, w3schools.com for the amount of knowledge i was acquired from their source.
+  * Websites which i used as references.
+
+    * https://www.youtube.com/watch?v=riDzcEQbX6k&t=12s i used the basic knowledge of selectAnswer function in script.js from this video however it was fully customised to my requirement.
+    * 404 page https://www.youtube.com/watch?v=Jj42_s3KnuM 
+    * tinypng.com for compressing the images
+    * convertio.co for converting images from jpg to webp.
+    * Wireframe created using https://balsamiq.cloud/s9mq6ha/p7e2wvk/r1D80
+    * Favicon generator https://favicon.io/favicon-converter/
+    * Readme responsive pic was created using https://ui.dev/amiresponsive?url=https://pramilashanmugam.github.io/Quiz/
+    
+
+### Content:
+* The question and answers for quiz has been taken from https://www.w3schools.com/quiztest/quiztest.asp?qtest=JS
+
+### Media: 
+* Background picture was taken from Pexels.com/pixabay.com
+* Favicon created using favicon.io.
 
 
 
