@@ -127,6 +127,57 @@ My main objective to create this quiz is, not only to check the users knowledge 
 
 ### Wireframes
 
+#### Landing page
+
+Desktop view
+
+   ![Screenshot 2024-02-10 8 07 51 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/2972554e-601a-4909-8331-84c2c9ca0bb4)
+
+Mobile view
+
+   ![Screenshot 2024-02-10 8 09 28 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3ae63193-d3fa-432a-82d8-bb5a9fd59468)
+
+#### Instruction section
+
+Desktop view
+
+   ![Screenshot 2024-02-10 8 14 57 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/fb9e9594-5160-4c98-8e10-ce742d0b6d3d)
+
+Mobile view
+
+   ![Screenshot 2024-02-10 8 13 22 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/1cb5f215-b8e5-4e19-9440-b5ac8fb7ede3)
+
+#### Option to Choose between 3 quizzes
+
+Desktop view
+
+   ![Screenshot 2024-02-10 8 18 01 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/7163a545-0497-459f-91e3-8443dbde1683)
+
+Mobile View
+
+   ![Screenshot 2024-02-10 8 19 31 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/f4b870b8-515b-4044-a7cf-69c6537075c1)
+
+#### Display Quiz questions
+
+Desktop view
+   
+![Screenshot 2024-02-10 8 24 34 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/ee23fb4b-79fc-4d58-b22b-ad7b1e0c4475)
+
+Mobile View
+
+   ![Screenshot 2024-02-10 8 23 40 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/840239ea-8956-4019-aaed-1aa8c6279aeb)
+
+#### Display Score
+
+Desktop view
+   
+   ![Screenshot 2024-02-10 8 27 45 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/16ca3e08-c0d3-4075-b152-6c867223cf24)
+
+Mobile View
+
+   ![Screenshot 2024-02-10 8 28 33 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/0da14e66-fa63-4dde-9f03-60efd3fc7cdf)
+
+
 # Testing
 
 ## Responsiveness
