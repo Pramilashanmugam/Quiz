@@ -222,37 +222,37 @@ Website was also opened on the following devices and no responsive issues were s
 
 * Each buttons in this website are tested to check whether it does its functionality as per design and the outcome was same as expected as per the functionality.
 
-   * Start button
+   * ###### Start button
 
-     * Testing was performed to check on clicking the start button does it navigates to the next division, as per design it navigated correctly to next division which is Instruction.
+     ![Screenshot 2024-02-10 8 51 42 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/563bdf89-5dbc-4881-a18b-43cd2ff861e6)
 
-  * Ready button
+  * ###### Ready button
 
-    * Testing was performed to check whether on click of Ready button does it navigates to the next division, as per design it navigates correctly to next division which is Option to choose the quiz. 
+    ![Screenshot 2024-02-10 8 50 18 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/4942dd51-cd26-4ef2-8d64-78ca6ea903ca) 
 
-  * Exit button
+  * ###### Exit button
 
-    * Checked whether on click of exit button does it return to the landing Quiz page. It has navigated correctly to the landing page as per the design.
+     ![Screenshot 2024-02-10 8 47 02 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/31d84bd5-b01a-4027-8560-71feff0ad9b0)
 
-  * HTML Button
+  * ###### HTML Button
 
-    * Testing performed to check whether on clicking HTML button does it navigate the correct set of Questions assigned for HTML quiz. It worked correctly as per design and navigated to the right set of HTML question and answers.
+     ![Screenshot 2024-02-10 8 54 07 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3ade1305-9fae-4db5-bf98-55ed14e57bba)
 
-  * CSS Button
+  * ###### CSS Button
 
-    * Testing performed to check whether on clicking CSS button does it navigate the correct set of Questions assigned for CSS quiz. It worked correctly as per design and navigated to the right set of CSS question and answers.
+     ![Screenshot 2024-02-10 8 54 54 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/ee718d05-a110-47bf-aa19-e276a9c2de7b)
 
-  * JavaScript Button
+  * ###### JavaScript Button
 
-    * Testing performed to check whether on clicking JavaScript button does it navigate to the correct set of Questions assigned for JavaScript quiz. It worked correctly as per design and navigated to the right set of JavaScript question and answers.
+     ![Screenshot 2024-02-10 8 55 52 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/9a1005e8-1c54-4efe-914f-36644669aa67)
   
-  * Next Button
+  * ###### Next Button
 
-    * As per design this button should appear only after the answer button is clicked and should stop displaying once the last question of the array is displayed. When tested its performance it function correctly as per the Design.
+     ![Screenshot 2024-02-10 9 09 44 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/2e1eba25-164c-4503-93ad-0768f2d4bee1)
   
-  * Play Again Button
+  * ###### Play Again Button
 
-    * As per design this button will appear in the last division with the Score and on click of this button should return to the landing page. On testing it performed correctly as per the requirement.
+     ![Screenshot 2024-02-10 9 21 59 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/83fe3a21-a149-4ede-b60e-5191c6de9ecb)
   
   
 
