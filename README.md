@@ -177,6 +177,16 @@ Mobile View
 
    ![Screenshot 2024-02-10 8 28 33 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/0da14e66-fa63-4dde-9f03-60efd3fc7cdf)
 
+#### 404 Page
+
+
+Desktop view
+
+   ![Screenshot 2024-02-10 10 24 52 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/e927433f-f0a3-4252-9d5f-c7fa00691249)
+
+Mobile view
+
+   ![Screenshot 2024-02-10 10 26 34 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/250503b9-ba25-4452-a7e2-3a123bad0085)
 
 # Testing
 
@@ -253,8 +263,59 @@ Website was also opened on the following devices and no responsive issues were s
   * ###### Play Again Button
 
      ![Screenshot 2024-02-10 9 21 59 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/83fe3a21-a149-4ede-b60e-5191c6de9ecb)
+
+  * ###### Display Question in Quiz
+    
+    ![Screenshot 2024-02-10 9 30 10 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/1cc86bfa-4be7-4cf9-aee5-508ed8112e38)
+
+  * ###### Answer Buttons
+
+    ![Screenshot 2024-02-10 9 45 52 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/dca8d9d8-c679-4142-8e06-47e85a02b585)
+
+  * ###### Score Display
+
+    ![Screenshot 2024-02-10 10 12 27 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/fea7e54d-65a5-48e5-a13c-57a34dafd1e5)
   
+
+* #### Challenges faced during Development and Testing
+
+  * After creating 2 javascript files, the Start button stopped functioning as per design, despite of using correct import and export command inside the javascript files. Identified that the issue is in html file and debugged the same by adding type ="module" inside the script element in the html file.
+
+  * Initial development of the website was only with html quiz questions, once the quiz started functioning correctly as per requirement,i added Css and Javascript question arrays. But after inclusion of new arrays, the funtionality for CSS and Javascript button didnot work as per design. The corresponding questions were not called on click of CSS and Javascript buttons rather it was displaying the HTML questions. Then the issue was identified and created a parameter 'val' inside the startquiz and displayquiz function. This parameter will take the value of respective quiz button to each function and works according the requirement.
+
+  * 404.html page was not functioning until 404.md file with the following command was included '---permalink: /404.html---'. This solution was found in slack community.
+
+## Validator Testing
+
+ * ### HTML 
+   * No errors were returned when passing through the official W3C Validator.
+
+   ![Screenshot 2024-02-10 11 18 33 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/e303fc86-2113-4d9a-984e-683d8fbcc796)
+
+
+* ### CSS
+  * No errors were found when passing through the official (Jigsaw) validator.
+   
+   ![Screenshot 2024-02-10 11 25 09 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/d25d46dc-6d1f-4364-ba8a-d26972e0d1ef)
+
+
+* ### JavaScript
+
+  * No errors were found on script.js file when passing through the official (JSHint) validator.
+
+  ![Screenshot 2024-02-10 11 27 43 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/bd1833ee-773e-4082-9a7d-f32b474de127)
+
+  * No errors were found on quizData.js file when passing through the official (JSHint) validator.
+
+  ![Screenshot 2024-02-10 11 30 08 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/7685ab96-473a-4c7c-b9a9-89ff552a46c2)
+
+
+# 
+
   
+
+
+
 
 
 

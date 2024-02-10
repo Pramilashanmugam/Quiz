@@ -14,7 +14,7 @@ const displayQuestion = document.getElementById('question');
 const displayAnswers = document.getElementById('answers');
 const finalScore = document.getElementById('finalscore');
 
-// onclick on respective button it goes to the respective function
+// onclick on these buttons it goes to the respective function
 htmlButton.addEventListener('click', function () {      // Call this function when HTML button is clicked
     quizQuestions("html");
 });
@@ -172,6 +172,8 @@ function reset() {
     }
 }
 
+/** Basic knowledge of this function is acquired from the youtube channel Web Dev Simplified however it is fully customised*/
+
 function selectAnswer(e) {
     try {
         const selectedButton = e.target;
@@ -198,7 +200,9 @@ function selectAnswer(e) {
     }
 }
 
-// function will display the total score scored by the user
+/**
+ * In the initial commits i had a if condition for the scoreRange in this function however changed it to for loop for better code readability 
+ * this function will display the total score scored by the user */ 
 function displayScore() {
     try {
         reset();
