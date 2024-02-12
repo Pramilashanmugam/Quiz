@@ -202,7 +202,7 @@ function selectAnswer(e) {
 
 /**
  * In the initial commits i had a if condition for the scoreRange in this function however changed it to for loop for better code readability 
- * this function will display the total score scored by the user */ 
+ * this function will display the total score scored by the user */
 function displayScore() {
     try {
         reset();

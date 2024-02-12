@@ -7,7 +7,7 @@ This website is very user friendly and easy to navigate with no complexity.
 
 This website is responsive on all the screens, from mobile to desktop.
 
-
+![Screenshot 2024-02-12 7 28 41 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/eede8c83-2f72-4d65-8267-47969d9cde6f)
 
 # Features
 
@@ -31,9 +31,7 @@ This website is responsive on all the screens, from mobile to desktop.
 
 ### Site Goals
 
-The goal of this quiz website is to target the people who wants to check their basic knowledge on HTML, CSS and JavaScript.
-Educate the user with correct answer if his answer was wrong. 
-Easy and hassle-free navigation in just one page, that any age group can navigate it without guidance.
+The goal of this quiz website is to target the people who wants to check their basic knowledge on HTML, CSS and JavaScript and also to educate the user with correct answer if their answer was wrong. It should be easy and hassle-free to navigate in just one page.
 
 ### User Stories  
 
@@ -63,11 +61,11 @@ Easy and hassle-free navigation in just one page, that any age group can navigat
 
 Desktop view
 
-   ![Screenshot 2024-02-12 12 15 36 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3957fcca-68ae-4bca-a08a-92d75655089d)
+   ![Screenshot 2024-02-12 8 28 07 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/ece6c108-6f90-4625-b1c0-e764c299b87f)
 
 Mobile view
 
-   ![Screenshot 2024-02-10 8 09 28 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3ae63193-d3fa-432a-82d8-bb5a9fd59468)
+   ![Screenshot 2024-02-12 8 34 53 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/1d5e82dd-03bb-474a-995e-8606d788661a)
 
 #### Instruction section
 
@@ -129,6 +127,12 @@ Mobile view
   * A site wide favicon has been implemented, showing the quiz logo.
 
       ![Screenshot 2024-02-08 10 02 20 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/b30d9a4a-9c1d-44ce-8a4b-9e5d8627c968)
+
+## Developed Website
+
+### About my Development Phase
+
+Developing an website with Javascript was quite challenging, i must say initial development phase was quite demotivating and a struggling period, I had very little hope on completing this project but now when I see my finished project, I feel really proud and confident. Every single line of the code was a learning phase for me.
 
 * ### Landing page
   * The landing page has a tech related background to match the theme of the quiz.
@@ -216,132 +220,10 @@ Mobile view
 * To create an input element for user name's and then to display the highest scorer of the quiz.
 * To fix timer for each questions.
 
-# Testing
+## Testing
 
-## Responsiveness
+### [Please click on this link to view the testing](testing.md)
 
-All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in [WCAG 2.1 Reflow criteria for responsive design](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) on Chrome, Edge, Firefox and Opera browsers.
-
-* Steps to test:
- * Open browser and navigate to [Quiz to check your knowledge](https://pramilashanmugam.github.io/Quiz/)
-  * Open the developer tools (right click and inspect)
-  * Set to responsive and decrease width to 320px.
-  * Set the zoom to 50%.
-  * Click and drag the responsive window to maximum width.
-
-Expected:
-
-Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
-
-Actual:
-
-Website behaved as expected.
-
-#### Cross-Browser Testing:
-
-Website was also opened on the following browsers with no issues
-
- * Safari
- * Mozilla firefox
- * Chrome
- * Edge
-
-Website was also opened on the following devices and no responsive issues were seen:
-
-* Galaxy fold
-* ipad Air
-* iPhone SE
-* Samsung s8+
-* Surface Pro 7
-
-## Functional Testing
-
-#### Buttons Testing:
-
-* Each buttons in this website are tested to check whether it does its functionality as per design and the outcome was same as expected as per the functionality.
-
-   * ###### Start button
-
-     ![Screenshot 2024-02-10 8 51 42 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/563bdf89-5dbc-4881-a18b-43cd2ff861e6)
-
-  * ###### Ready button
-
-    ![Screenshot 2024-02-10 8 50 18 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/4942dd51-cd26-4ef2-8d64-78ca6ea903ca) 
-
-  * ###### Exit button
-
-     ![Screenshot 2024-02-10 8 47 02 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/31d84bd5-b01a-4027-8560-71feff0ad9b0)
-
-  * ###### HTML Button
-
-     ![Screenshot 2024-02-10 8 54 07 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3ade1305-9fae-4db5-bf98-55ed14e57bba)
-
-  * ###### CSS Button
-
-     ![Screenshot 2024-02-10 8 54 54 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/ee718d05-a110-47bf-aa19-e276a9c2de7b)
-
-  * ###### JavaScript Button
-
-     ![Screenshot 2024-02-10 8 55 52 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/9a1005e8-1c54-4efe-914f-36644669aa67)
-  
-  * ###### Next Button
-
-     ![Screenshot 2024-02-10 9 09 44 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/2e1eba25-164c-4503-93ad-0768f2d4bee1)
-  
-  * ###### Play Again Button
-
-     ![Screenshot 2024-02-10 9 21 59 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/83fe3a21-a149-4ede-b60e-5191c6de9ecb)
-
-  * ###### Display Question in Quiz
-    
-    ![Screenshot 2024-02-10 9 30 10 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/1cc86bfa-4be7-4cf9-aee5-508ed8112e38)
-
-  * ###### Answer Buttons
-
-    ![Screenshot 2024-02-10 9 45 52 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/dca8d9d8-c679-4142-8e06-47e85a02b585)
-
-  * ###### Score Display
-
-    ![Screenshot 2024-02-10 10 12 27 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/fea7e54d-65a5-48e5-a13c-57a34dafd1e5)
-  
-
-* #### Bugs faced during Development and Testing:
-
-There are no known bugs at the moment. Below are some bugs found and fixed
-
- * After creating 2 javascript files, the Start button stopped functioning, despite using the right import commands and export commands inside the javascript files. I identified that the issue was in index.html file and debugged the same by adding type ="module" inside the script element in the HTML file.
-
-  * Initial development of the website was only with html quiz, once the quiz started functioning as per requirement, I added Css and Javascript question arrays. But after inclusion of new arrays, the funtionality for CSS and Javascript button didnot work as per design. The corresponding questions were not called on click of CSS and Javascript buttons rather it was displaying the HTML questions. Then the issue was identified and created a parameter 'val' inside the startquiz and displayquiz function. This parameter will take the value of respective quiz button to each function and works according to the requirement.
-
-  * When play again button was clicked, the response till reaching quiz worked perfectly but later it was showing the previous quiz last question instead of reseting the question from question number one. This issue got rectified by setting currentQuestionIndex = 0 in Start quiz.
-
-  * Next button was not getting hidden when the question is got displayed. This was fixed by identifying the typo error in the code.  
-
-  * 404.html page was not functioning until 404.md file with the following command was included '---permalink: /404.html---'. This solution was found in slack community.
-
-## Validator Testing
-
- * ### HTML 
-   * No errors were returned when passing through the official W3C Validator.
-
-   ![Screenshot 2024-02-10 11 18 33 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/e303fc86-2113-4d9a-984e-683d8fbcc796)
-
-
-* ### CSS
-  * No errors were found when passing through the official (Jigsaw) validator.
-   
-   ![Screenshot 2024-02-10 11 25 09 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/d25d46dc-6d1f-4364-ba8a-d26972e0d1ef)
-
-
-* ### JavaScript
-
-  * No errors were found on script.js file when passing through the official (JSHint) validator.
-
-  ![Screenshot 2024-02-10 11 27 43 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/bd1833ee-773e-4082-9a7d-f32b474de127)
-
-  * No errors were found on quizData.js file when passing through the official (JSHint) validator.
-
-  ![Screenshot 2024-02-10 11 30 08 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/7685ab96-473a-4c7c-b9a9-89ff552a46c2)
 
 
 ## PageSpeedInsight Result

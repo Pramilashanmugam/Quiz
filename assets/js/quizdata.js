@@ -1,3 +1,4 @@
+// Exporting the arrays
 // question and answer array for html quiz
 export const htmlQuestions = [
     {
@@ -284,4 +285,3 @@ export const jsQuestions = [
 ];
 // end of javascript quiz questions
 
-// Exporting the arrays
