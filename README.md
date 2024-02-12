@@ -25,9 +25,23 @@ This website is responsive on all the screens, from Mobile to desktop.
  * Git
    * Used to commit and push code during the development of the Website.
 
-## Objective
+## UX
 
-My main objective to create this quiz is, not only to check the users knowledge on the topic but also to educate them with correct answers.
+
+### Site Goals
+
+The Goal of this quiz website is to provide basic knowledge on HTML, CSS and JavaScript related questions to get answered.
+
+### User Stories  
+
+#### As a End-User:
+
+* Information should be related to the topic.
+* Questions should be understandable.
+* Easy to navigate.
+* If answer has gone wrong, it should educate with the correct answer.
+* 
+
 
 ## Existing Features
 
@@ -131,7 +145,7 @@ My main objective to create this quiz is, not only to check the users knowledge 
 
 Desktop view
 
-   ![Screenshot 2024-02-10 8 07 51 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/2972554e-601a-4909-8331-84c2c9ca0bb4)
+   ![Screenshot 2024-02-12 12 15 36 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3957fcca-68ae-4bca-a08a-92d75655089d)
 
 Mobile view
 
@@ -371,10 +385,8 @@ The project will now of been cloned on your local machine for use.
     * Wireframe created using https://balsamiq.cloud/s9mq6ha/p7e2wvk/r1D80
     * Favicon generator https://favicon.io/favicon-converter/
     * Readme responsive pic was created using https://ui.dev/amiresponsive?url=https://pramilashanmugam.github.io/Quiz/
+    * The question and answers for quiz has been taken from https://www.w3schools.com/quiztest/quiztest.asp?qtest=JS
     
-
-### Content:
-* The question and answers for quiz has been taken from https://www.w3schools.com/quiztest/quiztest.asp?qtest=JS
 
 ### Media: 
 * Background picture was taken from Pexels.com/pixabay.com
