@@ -132,7 +132,13 @@ Mobile view
 
 ### About my Development Phase
 
-Developing an website with Javascript was quite challenging, i must say initial development phase was quite demotivating and a struggling period, I had very little hope on completing this project but now when I see my finished project, I feel really proud and confident. Every single line of the code was a learning phase for me.
+* Developing an website with Javascript was quite challenging, i must say initial development phase was quite demotivating and a struggling period, I had very little hope on completing this project but now when I see my finished project, I feel really proud and confident for bringing the requirement to live. Every single line of the code was a learning phase. I feel more confident as a developer now.
+
+* As mentioned previously in the user stories i have implemented the requirement as user and as a administrator. This is a single page website very easy to navigate between the sections.
+
+### Color Scheme of website
+
+   ![Screenshot 2024-02-12 4 38 51 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/c7e7972c-f55a-463a-8ccc-aca49f1b71b2)
 
 * ### Landing page
   * The landing page has a tech related background to match the theme of the quiz.
@@ -156,8 +162,6 @@ Developing an website with Javascript was quite challenging, i must say initial 
 
   * On choosing the respective Quiz you will land to the questions related to the topic. Each question will have question number, 4 answer options, when the cursor is pointed on the answer you will have hover effect.
 
-
-
      ![Screenshot 2024-02-09 8 50 20 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/92868acc-a8b8-4ac5-be63-09970a41f51b)
 
 * ### Correct Answer
@@ -168,7 +172,6 @@ Developing an website with Javascript was quite challenging, i must say initial 
 
 
 * ### Wrong Answer
-
 
   * If the chosen answer was incorrect, the selected button will change to red and simultaneously it will display the correct answer in green color.
 
@@ -222,8 +225,7 @@ Developing an website with Javascript was quite challenging, i must say initial 
 
 ## Testing
 
-### [Please click on this link to view the testing](testing.md)
-
+### [Please click on this link to view the Testing performed](testing.md)
 
 
 ## PageSpeedInsight Result
