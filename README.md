@@ -1,11 +1,11 @@
 # A Quiz about HTML CSS JAVASCRIPT 
 ## Welcome to my [Quiz to check your knowledge](https://pramilashanmugam.github.io/Quiz/)
 
-The main purpose of developing this Quiz website is to help the user to check their knowledge on HTML, CSS and JavaScript Language and also educate them with correct answer incase if their answer was wrong. 
+The main purpose of developing this quiz website is to help the user to check their knowledge of HTML, CSS and JavaScript and also educate them with correct answers especially if their answer was wrong.
 
-This website is very userfriendly and easy to navigate with no complexcity.
+This website is very user friendly and easy to navigate with no complexity.
 
-This website is responsive on all the screens, from Mobile to desktop.
+This website is responsive on all the screens, from mobile to desktop.
 
  ![Screenshot 2024-02-09 8 45 15 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/e27b6e26-2aba-4f38-9568-e8ff20f64750)
 
@@ -31,7 +31,7 @@ This website is responsive on all the screens, from Mobile to desktop.
 
 ### Site Goals
 
-The Goal of this quiz website is to provide basic knowledge on HTML, CSS and JavaScript related questions to get answered.
+The goal of this quiz website is to provide basic knowledge of HTML, CSS and JavaScript related questions to get answered.
 
 ### User Stories  
 
@@ -39,7 +39,7 @@ The Goal of this quiz website is to provide basic knowledge on HTML, CSS and Jav
 
 * I want the questions to be relevant to the topic.
 * I want the questions to be understandable.
-* I want a clear information before starting the quiz.
+* I want clear information before starting the quiz.
 * If the instruction is not satisfying to continue, i want to exit.
 * I want an easy navigation throughout the website.
 * I want the correct answer to be shown, if the chosen answer has gone wrong.
@@ -47,13 +47,13 @@ The Goal of this quiz website is to provide basic knowledge on HTML, CSS and Jav
 
 #### As the Site Administrator:
 
-* I wanted the quiz is informative.
-* I wanted the website to be userfriendly.
-* I wanted the user to get the score they have achieved.
-* I wanted the user to play the quiz again.
-* I wanted the user to answer every question in the quiz.
-* I wanted the user to have choice of quizzes.
-* I wanted a customised 404 page.
+* I want the quiz to be informative.
+* I want the website to be user friendly.
+* I want the user to get the score they have achieved.
+* I want the user to play the quiz again.
+* I want the user to answer every question in the quiz.
+* I want the user to have choice of quizzes.
+* I want a customized 404 page.
 
 ### Wireframes
 
@@ -119,6 +119,7 @@ Mobile view
    ![Screenshot 2024-02-10 10 26 34 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/250503b9-ba25-4452-a7e2-3a123bad0085)
 
 
+
 ## Existing Features
 
 * ### Favicon
@@ -128,20 +129,20 @@ Mobile view
       ![Screenshot 2024-02-08 10 02 20 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/b30d9a4a-9c1d-44ce-8a4b-9e5d8627c968)
 
 * ### Landing page
-  * The landing page has a tech related background to match the Theme of quiz.
-  * And you have a display asking the user to click start button to begin the quiz.
+  * The landing page has a tech related background to match the theme of the quiz.
+  * And you have a display asking the user to click the start button to begin the quiz.
 
      ![Screenshot 2024-02-12 3 02 23 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/cc795661-97f2-450a-a2e3-9e3b9be23868)
 
 * ### Instructions
 
-  * Once the start button is clicked you will navigate to the instruction screen, you will have option to click Ready or Exit. If ready button is clicked it will take you to the next division and if Exit button is clicked it will take you back to Landing page.
+  * Once the start button is clicked, you will navigate to the instruction screen, you will have the option to click Ready or Exit. If the ready button is clicked, it will take you to the next division and if the Exit button is clicked it will take you back to the Landing page.
 
      ![Screenshot 2024-02-09 8 47 17 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/e664f766-fe02-476f-b46d-d09aa0949fec)
 
 * ### Option to Choose
 
-  * This page will display the options to choose a quiz between 3 options. On clicking to the respective buttons you will be directed to the quiz screen.
+  * This page will display the options to choose a quiz between 3 options. On clicking the respective buttons, you will be directed to the quiz screen.
  
      ![Screenshot 2024-02-09 8 48 04 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/8daf1709-59c1-474e-ba89-c82c5ce12846)
 
@@ -306,9 +307,9 @@ Website was also opened on the following devices and no responsive issues were s
 
 There are no known bugs at the moment. Below are some bugs found and fixed
 
-  * After creating 2 javascript files, the Start button stopped functioning, despite of using correct import and export command inside the javascript files. Identified that the issue is in html file and debugged the same by adding type ="module" inside the script element in the html file.
+ * After creating 2 javascript files, the Start button stopped functioning, despite using the right import commands and export commands inside the javascript files. I identified that the issue was in index.html file and debugged the same by adding type ="module" inside the script element in the HTML file.
 
-  * Initial development of the website was only with html quiz, once the quiz started functioning as per requirement, added Css and Javascript question arrays. But after inclusion of new arrays, the funtionality for CSS and Javascript button didnot work as per design. The corresponding questions were not called on click of CSS and Javascript buttons rather it was displaying the HTML questions. Then the issue was identified and created a parameter 'val' inside the startquiz and displayquiz function. This parameter will take the value of respective quiz button to each function and works according to the requirement.
+  * Initial development of the website was only with html quiz, once the quiz started functioning as per requirement, I added Css and Javascript question arrays. But after inclusion of new arrays, the funtionality for CSS and Javascript button didnot work as per design. The corresponding questions were not called on click of CSS and Javascript buttons rather it was displaying the HTML questions. Then the issue was identified and created a parameter 'val' inside the startquiz and displayquiz function. This parameter will take the value of respective quiz button to each function and works according to the requirement.
 
   * When play again button was clicked, the response till reaching quiz worked perfectly but later it was showing the previous quiz last question instead of reseting the question from question number one. This issue got rectified by setting currentQuestionIndex = 0 in Start quiz.
 
