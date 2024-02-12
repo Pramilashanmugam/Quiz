@@ -225,7 +225,7 @@ Mobile view
 
 ## Testing
 
-### [Please click on this link to view the Testing performed](testing.md)
+### [Please click on this link to view the Testing performed](TESTING.md)
 
 
 ## PageSpeedInsight Result
