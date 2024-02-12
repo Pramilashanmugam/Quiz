@@ -7,7 +7,7 @@ This website is very user friendly and easy to navigate with no complexity.
 
 This website is responsive on all the screens, from mobile to desktop.
 
- ![Screenshot 2024-02-09 8 45 15 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/e27b6e26-2aba-4f38-9568-e8ff20f64750)
+
 
 # Features
 
@@ -31,7 +31,9 @@ This website is responsive on all the screens, from mobile to desktop.
 
 ### Site Goals
 
-The goal of this quiz website is to provide basic knowledge of HTML, CSS and JavaScript related questions to get answered.
+The goal of this quiz website is to target the people who wants to check their basic knowledge on HTML, CSS and JavaScript.
+Educate the user with correct answer if his answer was wrong. 
+Easy and hassle-free navigation in just one page, that any age group can navigate it without guidance.
 
 ### User Stories  
 
@@ -132,7 +134,7 @@ Mobile view
   * The landing page has a tech related background to match the theme of the quiz.
   * And you have a display asking the user to click the start button to begin the quiz.
 
-     ![Screenshot 2024-02-12 3 02 23 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/cc795661-97f2-450a-a2e3-9e3b9be23868)
+      ![Screenshot 2024-02-12 5 41 12 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/1c46272f-11e7-4f2d-a533-3cf68aa53c54)
 
 * ### Instructions
 
