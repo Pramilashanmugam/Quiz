@@ -25,7 +25,8 @@ This website is responsive on all the screens, from Mobile to desktop.
  * Git
    * Used to commit and push code during the development of the Website.
 
-## UX
+
+## UX Design
 
 
 ### Site Goals
@@ -34,13 +35,88 @@ The Goal of this quiz website is to provide basic knowledge on HTML, CSS and Jav
 
 ### User Stories  
 
-#### As a End-User:
+#### As an User:
 
-* Information should be related to the topic.
-* Questions should be understandable.
-* Easy to navigate.
-* If answer has gone wrong, it should educate with the correct answer.
-* 
+* I want the questions to be relevant to the topic.
+* I want the questions to be understandable.
+* I want a clear information before starting the quiz.
+* If the instruction is not satisfying to continue, i want to exit.
+* I want an easy navigation throughout the website.
+* I want the correct answer to be shown, if the chosen answer has gone wrong.
+* I want the questions to be randomly displayed.
+
+#### As the Site Administrator:
+
+* I wanted the quiz is informative.
+* I wanted the website to be userfriendly.
+* I wanted the user to get the score they have achieved.
+* I wanted the user to play the quiz again.
+* I wanted the user to answer every question in the quiz.
+* I wanted the user to have choice of quizzes.
+* I wanted a customised 404 page.
+
+### Wireframes
+
+#### Landing page
+
+Desktop view
+
+   ![Screenshot 2024-02-12 12 15 36 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3957fcca-68ae-4bca-a08a-92d75655089d)
+
+Mobile view
+
+   ![Screenshot 2024-02-10 8 09 28 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3ae63193-d3fa-432a-82d8-bb5a9fd59468)
+
+#### Instruction section
+
+Desktop view
+
+   ![Screenshot 2024-02-10 8 14 57 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/fb9e9594-5160-4c98-8e10-ce742d0b6d3d)
+
+Mobile view
+
+   ![Screenshot 2024-02-10 8 13 22 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/1cb5f215-b8e5-4e19-9440-b5ac8fb7ede3)
+
+#### Option to Choose between 3 quizzes
+
+Desktop view
+
+   ![Screenshot 2024-02-10 8 18 01 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/7163a545-0497-459f-91e3-8443dbde1683)
+
+Mobile View
+
+   ![Screenshot 2024-02-10 8 19 31 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/f4b870b8-515b-4044-a7cf-69c6537075c1)
+
+#### Display Quiz questions
+
+Desktop view
+   
+![Screenshot 2024-02-10 8 24 34 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/ee23fb4b-79fc-4d58-b22b-ad7b1e0c4475)
+
+Mobile View
+
+   ![Screenshot 2024-02-10 8 23 40 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/840239ea-8956-4019-aaed-1aa8c6279aeb)
+
+#### Display Score
+
+Desktop view
+   
+   ![Screenshot 2024-02-10 8 27 45 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/16ca3e08-c0d3-4075-b152-6c867223cf24)
+
+Mobile View
+
+   ![Screenshot 2024-02-10 8 28 33 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/0da14e66-fa63-4dde-9f03-60efd3fc7cdf)
+
+#### 404 Page
+
+
+Desktop view
+
+   ![Screenshot 2024-02-10 10 24 52 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/e927433f-f0a3-4252-9d5f-c7fa00691249)
+
+Mobile view
+
+   ![Screenshot 2024-02-10 10 26 34 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/250503b9-ba25-4452-a7e2-3a123bad0085)
 
 
 ## Existing Features
@@ -137,71 +213,6 @@ The Goal of this quiz website is to provide basic knowledge on HTML, CSS and Jav
 * To create an input element for user name's and then to display the highest scorer of the quiz.
 * To fix timer for each questions.
 
-## Design
-
-### Wireframes
-
-#### Landing page
-
-Desktop view
-
-   ![Screenshot 2024-02-12 12 15 36 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3957fcca-68ae-4bca-a08a-92d75655089d)
-
-Mobile view
-
-   ![Screenshot 2024-02-10 8 09 28 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/3ae63193-d3fa-432a-82d8-bb5a9fd59468)
-
-#### Instruction section
-
-Desktop view
-
-   ![Screenshot 2024-02-10 8 14 57 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/fb9e9594-5160-4c98-8e10-ce742d0b6d3d)
-
-Mobile view
-
-   ![Screenshot 2024-02-10 8 13 22 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/1cb5f215-b8e5-4e19-9440-b5ac8fb7ede3)
-
-#### Option to Choose between 3 quizzes
-
-Desktop view
-
-   ![Screenshot 2024-02-10 8 18 01 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/7163a545-0497-459f-91e3-8443dbde1683)
-
-Mobile View
-
-   ![Screenshot 2024-02-10 8 19 31 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/f4b870b8-515b-4044-a7cf-69c6537075c1)
-
-#### Display Quiz questions
-
-Desktop view
-   
-![Screenshot 2024-02-10 8 24 34 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/ee23fb4b-79fc-4d58-b22b-ad7b1e0c4475)
-
-Mobile View
-
-   ![Screenshot 2024-02-10 8 23 40 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/840239ea-8956-4019-aaed-1aa8c6279aeb)
-
-#### Display Score
-
-Desktop view
-   
-   ![Screenshot 2024-02-10 8 27 45 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/16ca3e08-c0d3-4075-b152-6c867223cf24)
-
-Mobile View
-
-   ![Screenshot 2024-02-10 8 28 33 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/0da14e66-fa63-4dde-9f03-60efd3fc7cdf)
-
-#### 404 Page
-
-
-Desktop view
-
-   ![Screenshot 2024-02-10 10 24 52 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/e927433f-f0a3-4252-9d5f-c7fa00691249)
-
-Mobile view
-
-   ![Screenshot 2024-02-10 10 26 34 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/250503b9-ba25-4452-a7e2-3a123bad0085)
-
 # Testing
 
 ## Responsiveness
@@ -291,11 +302,17 @@ Website was also opened on the following devices and no responsive issues were s
     ![Screenshot 2024-02-10 10 12 27 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/fea7e54d-65a5-48e5-a13c-57a34dafd1e5)
   
 
-* #### Challenges faced during Development and Testing
+* #### Bugs faced during Development and Testing:
 
-  * After creating 2 javascript files, the Start button stopped functioning as per design, despite of using correct import and export command inside the javascript files. Identified that the issue is in html file and debugged the same by adding type ="module" inside the script element in the html file.
+There are no known bugs at the moment. Below are some bugs found and fixed
 
-  * Initial development of the website was only with html quiz questions, once the quiz started functioning correctly as per requirement,i added Css and Javascript question arrays. But after inclusion of new arrays, the funtionality for CSS and Javascript button didnot work as per design. The corresponding questions were not called on click of CSS and Javascript buttons rather it was displaying the HTML questions. Then the issue was identified and created a parameter 'val' inside the startquiz and displayquiz function. This parameter will take the value of respective quiz button to each function and works according the requirement.
+  * After creating 2 javascript files, the Start button stopped functioning, despite of using correct import and export command inside the javascript files. Identified that the issue is in html file and debugged the same by adding type ="module" inside the script element in the html file.
+
+  * Initial development of the website was only with html quiz, once the quiz started functioning as per requirement, added Css and Javascript question arrays. But after inclusion of new arrays, the funtionality for CSS and Javascript button didnot work as per design. The corresponding questions were not called on click of CSS and Javascript buttons rather it was displaying the HTML questions. Then the issue was identified and created a parameter 'val' inside the startquiz and displayquiz function. This parameter will take the value of respective quiz button to each function and works according to the requirement.
+
+  * When play again button was clicked, the response till reaching quiz worked perfectly but later it was showing the previous quiz last question instead of reseting the question from question number one. This issue got rectified by setting currentQuestionIndex = 0 in Start quiz.
+
+  * Next button was not getting hidden when the question is got displayed. This was fixed by identifying the typo error in the code.  
 
   * 404.html page was not functioning until 404.md file with the following command was included '---permalink: /404.html---'. This solution was found in slack community.
 
