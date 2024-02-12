@@ -1,5 +1,5 @@
 // Importing the quiz data from another js file
-import { htmlQuestions, cssQuestions, jsQuestions } from './quizData.js';
+import { htmlQuestions, cssQuestions, jsQuestions } from './quizdata.js';
 
 // assigning the button by its id
 const startButton = document.getElementById('start-btn');
