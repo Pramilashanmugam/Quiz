@@ -131,7 +131,7 @@ Mobile view
   * The landing page has a tech related background to match the Theme of quiz.
   * And you have a display asking the user to click start button to begin the quiz.
 
-     ![Screenshot 2024-02-09 8 46 35 PM](https://github.com/Pramilashanmugam/Quiz/assets/150790058/6e03a48c-f284-44f6-a32f-4bd7cd593c71)
+     ![Screenshot 2024-02-12 3 02 23 PM](https://github.com/Pramilashanmugam/Zumba-Project1/assets/150790058/cc795661-97f2-450a-a2e3-9e3b9be23868)
 
 * ### Instructions
 
